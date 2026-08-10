@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 425 500" width="425" height="500">
+  <defs>
+    <linearGradient id="hairGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e1a17"/>
+      <stop offset="100%" stop-color="#1e1a17"/>
+    </linearGradient>
+  </defs>
+
+  <!-- back hair -->
+  <ellipse cx="200" cy="160" rx="112" ry="96" fill="url(#hairGrad)"/>
+
+  <!-- ponytail left -->
+  <g>
+    <circle cx="74" cy="150" r="38" fill="url(#hairGrad)"/>
+    <path d="M 52 132 q 14 -18 30 -6 M 48 158 q 16 -14 30 -4 M 52 184 q 14 -10 28 2" fill="none" stroke="#6b625a" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+    <circle cx="74" cy="112" r="11" fill="#F9A8D4"/>
+  </g>
+
+  <!-- ponytail right -->
+  <g>
+    <circle cx="351" cy="150" r="38" fill="url(#hairGrad)"/>
+    <path d="M 373 132 q -14 -18 -30 -6 M 377 158 q -16 -14 -30 -4 M 373 184 q -14 -10 -28 2" fill="none" stroke="#6b625a" stroke-width="3" stroke-linecap="round" opacity="0.9"/>
+    <circle cx="351" cy="112" r="11" fill="#FCD34D"/>
+  </g>
+
+  <!-- face -->
+  <ellipse cx="200" cy="228" rx="88" ry="98" fill="#ffffff" stroke="#1e1a17" stroke-width="4.5"/>
+
+  <!-- bangs -->
+  <path d="M 114 168
+           C 128 122 150 116 168 138
+           C 186 112 214 112 232 138
+           C 250 116 272 122 286 168
+           C 268 180 240 184 200 184
+           C 160 184 132 180 114 168 Z"
+        fill="#1e1a17"/>
+
+  <!-- eyebrows -->
+  <path d="M 126 140 Q 150 128 176 136" fill="none" stroke="#1e1a17" stroke-width="4" stroke-linecap="round"/>
+  <path d="M 249 136 Q 275 128 299 140" fill="none" stroke="#1e1a17" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- glasses -->
+  <circle cx="161.5" cy="180" r="38" fill="rgba(255,255,255,0.32)" stroke="#1e1a17" stroke-width="5"/>
+  <circle cx="238" cy="180" r="38" fill="rgba(255,255,255,0.32)" stroke="#1e1a17" stroke-width="5"/>
+  <path d="M 184 174 Q 200 165 216 174" fill="none" stroke="#1e1a17" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M 123.5 180 L 104 186" fill="none" stroke="#1e1a17" stroke-width="4.5" stroke-linecap="round"/>
+  <path d="M 301.5 180 L 321 186" fill="none" stroke="#1e1a17" stroke-width="4.5" stroke-linecap="round"/>
+
+
+
+  <!-- nose -->
+  <path d="M 196 216 Q 200 222 196 226" fill="none" stroke="#1e1a17" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- smile -->
+  <path d="M 170 262 Q 200 288 230 262" fill="none" stroke="#1e1a17" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- blush (playful accents) -->
+  <ellipse cx="130" cy="248" rx="13" ry="9" fill="#F9A8D4" opacity="0.55"/>
+  <ellipse cx="270" cy="248" rx="13" ry="9" fill="#F9A8D4" opacity="0.55"/>
+
+  <!-- body / shoulders -->
+  <path d="M 120 322 Q 122 392 90 474 L 310 474 Q 303 392 305 322 Q 250 348 200 348 Q 150 348 120 322 Z"
+        fill="#ffffff" stroke="#1e1a17" stroke-width="4.5" stroke-linejoin="round"/>
+  <!-- collar -->
+  <path d="M 172 330 L 200 382 L 228 330" fill="none" stroke="#1e1a17" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- star badge (playful accent) -->
+  <path d="M 200 428 l 4.4 9 9.9 1.4 -7.2 7 1.7 9.9 -8.8 -4.6 -8.8 4.6 1.7 -9.9 -7.2 -7 9.9 -1.4 z" fill="#FCD34D" stroke="#1e1a17" stroke-width="2.5" stroke-linejoin="round"/>
+</svg>
