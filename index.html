@@ -1,0 +1,1663 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>李琳娜 · AI产品运营作品集</title>
+<meta name="description" content="李琳娜 —— 一个懂数据的文科生，正在AI产品运营的路上死磕自己。">
+<script>
+/* 图片兜底占位（图片缺失时自动显示设计感占位图，放入真实图片后自动替换） */
+window.imgFallback = function (img, label, path) {
+  if (img.dataset.fb) return;
+  img.dataset.fb = '1';
+  var palettes = ['#F2D675', '#B8D4A8', '#D4A5A5', '#8B7EC4', '#F5F1E8', '#E85D4E'];
+  var hash = 0; for (var i = 0; i < label.length; i++) hash = (hash * 31 + label.charCodeAt(i)) >>> 0;
+  var c = palettes[hash % palettes.length];
+  var svg = '<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">'
+    + '<rect width="800" height="600" fill="' + c + '"/>'
+    + '<rect x="24" y="24" width="752" height="552" fill="none" stroke="#2C1810" stroke-width="3" stroke-dasharray="10 8" rx="24"/>'
+    + '<circle cx="400" cy="205" r="62" fill="#F5F1E8" stroke="#2C1810" stroke-width="4"/>'
+    + '<path d="M352 420 L400 320 L448 420 Z" fill="#F5F1E8" stroke="#2C1810" stroke-width="4" stroke-linejoin="round"/>'
+    + '<text x="400" y="292" text-anchor="middle" font-size="30" font-weight="700" fill="#2C1810" font-family="Noto Serif SC, SimSun, serif">' + label + '</text>'
+    + '<text x="400" y="344" text-anchor="middle" font-size="19" fill="#6E5A4B" font-family="Noto Serif SC, SimSun, serif">请将图片放入 ' + path + '</text>'
+    + '<text x="400" y="376" text-anchor="middle" font-size="15" fill="#A08C78" font-family="Noto Serif SC, SimSun, serif">放入后自动替换此占位图</text>'
+    + '</svg>';
+  img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(svg);
+};
+</script>
+<style>@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Noto+Serif+SC:wght@600;700;900&family=Nunito:wght@400;600;700;800&family=Quicksand:wght@500;600;700&display=swap');
+
+:root{
+  --bg:#F5F1E8;
+  --card:#EDE5D6;
+  --border:#EDE5D6;
+  --border-strong:#E3DAC7;
+  --primary:#E85D4E;
+  --primary-soft:#F7DDD9;
+  --primary-deep:#CE4638;
+  --ink:#2C1810;
+  --muted:#6E5A4B;
+  --faint:#A08C78;
+  --dark:#4A5D23;
+  --blue:#4A90E2;
+  --yellow:#F2D675;
+  --pink:#D4A5A5;
+  --mint:#B8D4A8;
+  --lav:#8B7EC4;
+  --coral:#E85D4E;
+  --radius-xl:30px;
+  --radius-lg:26px;
+  --radius-md:22px;
+  --radius-sm:18px;
+  --shadow-soft:none;
+  --shadow-hover:none;
+  --font-display:'Playfair Display','Noto Serif SC','Source Han Serif SC','Songti SC','STSong','SimSun',serif;
+  --font-body:'Nunito','Quicksand','PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;
+  --font-label:'Quicksand','Nunito','PingFang SC','Microsoft YaHei',sans-serif;
+  --ease:cubic-bezier(.22,.8,.3,1);
+  --paper:#F5F1E8;
+  --paper-deep:#EDE5D6;
+  --sticky:#F2D675;
+  --sticky-deep:#E3BE4E;
+  --grass:#B8D4A8;
+  --grass-deep:#9DC08B;
+  --olive:#4A5D23;
+  --blush:#D4A5A5;
+  --blush-deep:#C48B8B;
+  --lav-deep:#7466AE;
+  --coral-deep:#CE4638;
+  --blue-deep:#3579C8;
+  --rose:#E056C8;
+  --ink2:#1A3C34;
+  --line:#E3DAC7;
+  --grain:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='saturate' values='0'/></filter><rect width='180' height='180' filter='url(%23n)' opacity='0.55'/></svg>");
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--font-body);font-weight:400;line-height:1.7;background:var(--bg);color:var(--ink);overflow-x:hidden}
+body.locked{overflow:hidden}
+img{max-width:100%}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--primary);color:#fff}
+.hero-title,.section-title,.hello,.contact-intro,.pc-body h3,.m-cover-info h3,.m-screen h4,.insight-head h5,.principle h5,.exp h4,.skill-card h4,.sg-head h3,.m-stat .num,.m-stat .cap,.contact-card .val,.exp .org{font-family:var(--font-display);font-weight:400;letter-spacing:-0.02em}
+.nav-logo,.nav-links a,.section-label,.sg-tag,.tag,.pc-num,.m-cover-tag,.exp-title,.contact-card .lab,.copy-btn,.pc-cta,.sg-note,.pill,.p-num,.intro-brand,.hero-school,.scroll-cue{font-family:var(--font-label);text-transform:uppercase;letter-spacing:.06em}
+#intro{position:fixed;inset:0;z-index:100;background:var(--bg);display:flex;align-items:center;justify-content:center;flex-direction:column;transition:opacity .7s ease,visibility .7s ease}
+#intro.hidden{opacity:0;visibility:hidden;pointer-events:none}
+.intro-brand{position:absolute;top:28px;left:32px;font-weight:600;font-size:13px;color:var(--muted)}
+.intro-brand span{color:var(--primary)}
+.intro-dots{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.intro-dots i{position:absolute;border-radius:50%;opacity:.5;animation:floaty 9s ease-in-out infinite}
+.intro-dots i:nth-child(1){width:18px;height:18px;background:var(--yellow);top:18%;left:12%}
+.intro-dots i:nth-child(2){width:12px;height:12px;background:var(--pink);top:26%;right:16%;animation-delay:-2s}
+.intro-dots i:nth-child(3){width:22px;height:22px;background:var(--mint);bottom:22%;left:20%;animation-delay:-4s}
+.intro-dots i:nth-child(4){width:10px;height:10px;background:var(--lav);bottom:18%;right:24%;animation-delay:-1s}
+.intro-dots i:nth-child(5){width:14px;height:14px;background:var(--coral);top:60%;right:8%;animation-delay:-3s}
+.intro-dots i:nth-child(6){width:9px;height:9px;background:var(--primary);top:10%;right:38%;animation-delay:-5s}
+.intro-dots i:nth-child(7){width:13px;height:13px;background:var(--yellow);bottom:8%;left:46%;animation-delay:-2.5s}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-18px)}}
+.avatar-wrap{position:relative;perspective:900px;display:flex;flex-direction:column;align-items:center}
+.avatar-stage{position:relative;transform-style:preserve-3d;will-change:transform;cursor:pointer}
+.avatar-stage img{display:block;height:min(62vh,620px);width:auto;pointer-events:none;-webkit-user-select:none;user-select:none}
+.pupil{position:absolute;width:18px;height:18px;border-radius:50%;background:var(--ink);transform:translate(-50%,-50%) translateZ(16px);box-shadow:0 0 0 1.5px rgba(30,26,23,.08);will-change:transform;z-index:5}
+#pupilL{left:38%;top:36%}
+#pupilR{left:56%;top:36%}
+.avatar-shadow{position:relative;margin-top:-8px;width:54%;height:26px;border-radius:50%;background:radial-gradient(ellipse at center,rgba(30,26,23,.10) 0%,rgba(30,26,23,0) 70%);will-change:transform;pointer-events:none}
+.intro-hint{margin-top:30px;display:flex;align-items:center;gap:10px;color:var(--muted);font-size:12px;font-weight:600;animation:hintPulse 2.2s ease-in-out infinite}
+.intro-hint .arr{display:inline-block;animation:arrowBounce 1.4s ease-in-out infinite;font-size:16px}
+@keyframes hintPulse{0%,100%{opacity:.55}50%{opacity:1}}
+@keyframes arrowBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+#fxCanvas{position:fixed;inset:0;z-index:118;pointer-events:none}
+#flash{position:fixed;inset:0;background:#fff;opacity:0;z-index:119;pointer-events:none;transition:opacity .18s ease}
+#flash.on{opacity:1}
+#lightSweep{position:fixed;inset:0;z-index:120;pointer-events:none;visibility:hidden;overflow:hidden}
+#lightSweep::before{content:"";position:absolute;top:-30%;left:-40%;width:32%;height:160%;background:linear-gradient(100deg,transparent 0%,rgba(250,246,240,.95) 40%,rgba(212,90,58,.25) 62%,transparent 100%);transform:rotate(12deg);translate:-10% 0}
+#lightSweep.run{visibility:visible}
+#lightSweep.run::before{animation:sweep 0.85s cubic-bezier(.5,0,.3,1) forwards}
+@keyframes sweep{to{transform:rotate(12deg) translateX(420vw)}}
+.nav{position:fixed;top:0;left:0;right:0;z-index:60;display:flex;align-items:center;justify-content:space-between;padding:16px 32px;max-width:1180px;margin:0 auto;opacity:0;transform:translateY(-14px);transition:opacity .6s ease,transform .6s ease;pointer-events:none;background:rgba(250,246,240,.82);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);border-radius:0 0 var(--radius-md) var(--radius-md)}
+.nav.show{opacity:1;transform:none;pointer-events:auto}
+.nav-logo{font-weight:600;font-size:14px}
+.nav-logo b{color:var(--primary)}
+.nav-links{display:flex;gap:30px;font-size:12px;font-weight:600;color:var(--muted)}
+.nav-links a{position:relative;transition:color .25s ease}
+.nav-links a::after{content:"";position:absolute;left:50%;bottom:-6px;width:100%;height:2px;background:var(--primary);border-radius:2px;transform:translateX(-50%) scaleX(0);transform-origin:center;transition:transform .3s var(--ease)}
+.nav-links a:hover{color:var(--primary)}
+.nav-links a:hover::after{transform:translateX(-50%) scaleX(1)}
+main{opacity:0;transform:translateY(26px);transition:opacity .9s ease,transform .9s ease}
+main.show{opacity:1;transform:none}
+.section{max-width:1120px;margin:0 auto;padding:110px 32px;position:relative}
+.section-label{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:12px;color:var(--primary)}
+.section-label::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--primary)}
+.section-title{font-size:clamp(2rem,4.2vw,2.9rem);margin:14px 0 10px;line-height:1.25}
+.section-sub{color:var(--muted);max-width:640px;font-size:1rem}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.blob{position:absolute;border-radius:50%;pointer-events:none;z-index:0;will-change:transform}
+.blob-inner{position:absolute;inset:0;border-radius:50%;opacity:.4;animation:floaty 10s ease-in-out infinite;background:#e7ddcf!important}
+#hero{padding-top:170px;text-align:center}
+#hero .blob{width:340px;height:340px;top:-40px;left:-120px}
+#hero .blob+.blob{left:auto;right:-140px;top:60px;width:280px;height:280px}
+#hero .blob:nth-of-type(2) .blob-inner{animation-delay:-3s}
+.hero-greet{display:inline-flex;align-items:center;gap:8px;font-family:var(--font-label);text-transform:uppercase;letter-spacing:.06em;font-size:12px;font-weight:600;color:var(--muted);background:var(--card);border:1px solid var(--border-strong);padding:10px 22px;border-radius:100px;margin-bottom:30px}
+.hero-greet .wave{display:inline-block;animation:wave 2.4s ease-in-out infinite}
+@keyframes wave{0%,60%,100%{transform:rotate(0)}10%,30%{transform:rotate(16deg)}20%,40%{transform:rotate(-8deg)}}
+.hero-title{font-size:clamp(2.6rem,7vw,4.6rem);line-height:1.16}
+.hero-title .hl{background:linear-gradient(180deg,transparent 62%,rgba(212,90,58,.18) 62%);padding:0 6px;border-radius:3px}
+.hero-title .hl-blue{color:var(--primary);background:none;padding:0}
+.hero-title .line2{display:block;margin-top:8px}
+.keywords{display:flex;gap:18px;justify-content:center;margin:50px auto 0;flex-wrap:wrap}
+.keyword{min-width:150px;padding:24px 20px;border-radius:var(--radius-lg);text-align:center;font-weight:600;font-size:1.02rem;background:var(--card);border:1px solid var(--border-strong);transition:transform .3s var(--ease),box-shadow .3s ease,border-color .3s ease;cursor:default}
+.keyword .emoji{display:block;font-size:1.7rem;margin-bottom:6px}
+.keyword:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover);border-color:var(--primary)}
+.k1:hover{border-color:var(--primary);box-shadow:var(--shadow-hover)}
+.k2:hover{border-color:var(--yellow);box-shadow:var(--shadow-hover)}
+.k3:hover{border-color:var(--pink);box-shadow:var(--shadow-hover)}
+.hero-school{margin-top:56px;display:flex;align-items:center;justify-content:center;gap:12px;color:var(--faint);font-size:12px}
+.hero-school .dot{width:5px;height:5px;border-radius:50%;background:var(--primary)}
+.hero-school .dot:nth-child(2){background:var(--yellow)}
+.scroll-cue{margin:70px auto 0;width:26px;height:42px;border:2px solid var(--ink);border-radius:999px;position:relative;opacity:.5}
+.scroll-cue::after{content:"";position:absolute;left:50%;top:8px;width:4px;height:8px;margin-left:-2px;border-radius:4px;background:var(--primary);animation:cue 1.6s ease-in-out infinite}
+@keyframes cue{0%{transform:translateY(0);opacity:1}70%{transform:translateY(14px);opacity:0}100%{opacity:0}}
+.about-grid{display:grid;grid-template-columns:5fr 7fr;gap:64px;align-items:start;margin-top:48px}
+.about-photo{position:relative;max-width:380px}
+.about-photo .blob-bg{position:absolute;inset:-26px;border-radius:var(--radius-xl);transform:rotate(-4deg);background:linear-gradient(135deg,#e7d9c8,#f0ded2 55%,#e8ddca);z-index:0}
+.about-photo img{position:relative;z-index:1;width:100%;border-radius:var(--radius-lg);border:8px solid #fff;box-shadow:var(--shadow-soft);transform:rotate(1.6deg)}
+.about-photo .tape{position:absolute;z-index:2;top:-14px;left:50%;margin-left:-30px;width:60px;height:24px;background:rgba(212,90,58,.22);opacity:.95;border-radius:3px;transform:rotate(-5deg);box-shadow:0 2px 6px rgba(30,26,23,.06)}
+.about-txt .hello{font-size:clamp(1.7rem,3.2vw,2.3rem);margin-bottom:6px}
+.about-txt .tagline{color:var(--muted);font-size:1.05rem;margin-bottom:18px}
+.about-divider{border:none;border-top:1px dashed var(--border-strong);margin:22px 0}
+.about-meta{display:flex;align-items:center;gap:8px;font-size:.95rem;color:var(--muted);margin-bottom:26px}
+.exp-block{margin-top:22px}
+.exp-title{font-size:11px;font-weight:700;color:var(--faint);margin-bottom:14px}
+.exp{position:relative;padding:0 0 24px 26px;border-left:1px solid var(--border-strong)}
+.exp:last-child{padding-bottom:4px}
+.exp::before{content:"";position:absolute;left:-8px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--primary);box-shadow:0 0 0 4px rgba(212,90,58,.14)}
+.exp:nth-child(odd)::before{background:var(--yellow);box-shadow:0 0 0 4px rgba(201,161,94,.16)}
+.exp h4{font-size:1.1rem;margin-bottom:6px}
+.exp .org{font-size:.85rem;color:var(--muted);font-weight:500;letter-spacing:.04em;margin-bottom:6px}
+.exp p{font-size:.95rem;color:var(--muted)}
+.exp p b{color:var(--primary);font-weight:600}
+.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:48px}
+.project-card{background:var(--card);border:1px solid var(--border-strong);border-radius:var(--radius-xl);overflow:hidden;cursor:pointer;transition:transform .3s var(--ease),box-shadow .3s ease,border-color .3s ease;display:flex;flex-direction:column}
+.project-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover);border-color:var(--primary)}
+.pc-cover{position:relative;aspect-ratio:4/3;overflow:hidden;background:#e4dacd}
+.pc-cover img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)}
+.project-card:hover .pc-cover img{transform:scale(1.05)}
+.pc-num{position:absolute;top:12px;left:12px;background:rgba(250,246,240,.92);border:1px solid var(--border-strong);font-size:11px;font-weight:700;color:var(--primary);padding:4px 12px;border-radius:100px}
+.pc-body{padding:22px 22px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.pc-body h3{font-size:1.15rem;line-height:1.45}
+.pc-body .pc-sub{font-size:.88rem;color:var(--muted);line-height:1.6}
+.tag-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.tag{font-size:10.5px;font-weight:600;padding:5px 13px;border-radius:100px;background:#e0d6c8;color:var(--muted);transition:background .25s ease,color .25s ease}
+.tag:hover{background:var(--ink);color:var(--bg)}
+.tag.t-blue,.tag.t-yellow,.tag.t-pink,.tag.t-mint,.tag.t-lav,.tag.t-coral{background:#e0d6c8;color:var(--muted)}
+.tag.t-blue:hover,.tag.t-yellow:hover,.tag.t-pink:hover,.tag.t-mint:hover,.tag.t-lav:hover,.tag.t-coral:hover{background:var(--ink);color:var(--bg)}
+.pc-cta{margin-top:8px;font-size:11px;font-weight:600;color:var(--primary);display:inline-flex;align-items:center;gap:6px}
+.pc-cta::after{content:"→";transition:transform .25s ease}
+.project-card:hover .pc-cta::after{transform:translateX(5px)}
+.skill-group{margin-top:44px}
+.sg-head{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+.sg-head .sg-dot{width:12px;height:12px;border-radius:4px;transform:rotate(45deg)}
+.sg-head h3{font-size:1.3rem}
+.sg-head .sg-tag{font-size:10.5px;font-weight:600;color:var(--muted);background:var(--card);border:1px solid var(--border-strong);padding:4px 14px;border-radius:100px}
+.skill-grid{display:grid;gap:18px}
+.skill-grid.cols-4{grid-template-columns:repeat(4,1fr)}
+.skill-grid.cols-2{grid-template-columns:repeat(2,1fr)}
+.skill-grid.cols-2.small{grid-template-columns:repeat(2,1fr)}
+.skill-card{background:var(--card);border:1px solid var(--border-strong);border-radius:var(--radius-lg);padding:26px;transition:transform .3s var(--ease),box-shadow .3s ease,border-color .3s ease}
+.skill-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover);border-color:var(--primary)}
+.skill-card .ico{font-size:1.9rem;line-height:1;display:block;margin-bottom:14px}
+.skill-card h4{font-size:1.15rem;margin-bottom:8px}
+.skill-card p{font-size:.9rem;color:var(--muted)}
+.skill-card .arrow{display:block;margin-top:14px;font-family:var(--font-label);text-transform:uppercase;letter-spacing:.06em;font-size:10.5px;font-weight:600;color:var(--primary)}
+.skill-card .arrow::before{content:"→ "}
+.skill-card.small{padding:22px}
+.skill-card.small h4{font-size:1.05rem}
+.skill-card.small p{font-size:.85rem}
+.sg-note{margin-top:16px;font-size:11px;font-weight:600;color:var(--primary);display:flex;align-items:center;gap:8px}
+.sg-note::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--primary)}
+#contacts{text-align:center;padding-bottom:120px}
+#contacts .blob{width:260px;height:260px;bottom:-60px;left:-90px}
+#contacts .blob+.blob{left:auto;right:-100px;top:-40px;width:220px;height:220px}
+.contact-intro{font-size:clamp(1.3rem,2.7vw,1.8rem);line-height:1.7;margin-top:36px}
+.contact-intro .hl-blue{color:var(--primary)}
+.contact-sub{margin-top:14px;color:var(--muted)}
+.contact-cards{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-top:44px}
+.contact-card{min-width:250px;background:var(--card);border:1px solid var(--border-strong);border-radius:var(--radius-lg);padding:24px 28px;display:flex;align-items:center;gap:16px;transition:transform .3s var(--ease),box-shadow .3s ease,border-color .3s ease}
+.contact-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover);border-color:var(--primary)}
+.contact-card .ico{font-size:1.6rem}
+.contact-card .lab{font-size:10.5px;color:var(--faint);font-weight:600}
+.contact-card .val{font-size:1.05rem}
+.copy-btn{margin-top:26px;display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--bg);border:none;padding:14px 30px;border-radius:100px;font-size:12px;font-weight:600;cursor:pointer;transition:transform .25s ease,box-shadow .25s ease,background .25s ease}
+.copy-btn:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(30,26,23,.22);background:var(--primary)}
+.copy-btn.copied{background:var(--primary)}
+#toast{position:fixed;left:50%;bottom:36px;transform:translate(-50%,80px);z-index:300;background:var(--ink);color:var(--bg);padding:11px 22px;border-radius:100px;font-size:.9rem;font-weight:600;opacity:0;transition:all .4s var(--ease);pointer-events:none}
+#toast.show{opacity:1;transform:translate(-50%,0)}
+footer{background:var(--dark);color:#cfc6ba;padding:52px 32px 60px;text-align:center;font-size:.85rem;border-top:1px solid rgba(250,246,240,.06)}
+footer b{color:var(--bg)}
+.modal-overlay{position:fixed;inset:0;z-index:200;background:rgba(30,26,23,.55);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;padding:22px;opacity:0;visibility:hidden;transition:opacity .32s ease,visibility .32s ease}
+.modal-overlay.open{opacity:1;visibility:visible}
+.modal{position:relative;width:min(980px,100%);max-height:88vh;background:var(--bg);border:1px solid var(--border-strong);border-radius:var(--radius-xl);overflow-y:auto;transform:translateY(44px) scale(.96);transition:transform .38s var(--ease);box-shadow:0 40px 90px rgba(30,26,23,.28)}
+.modal-overlay.open .modal{transform:none}
+.modal-close{position:sticky;top:18px;float:right;margin-right:18px;z-index:5;width:38px;height:38px;border-radius:50%;background:var(--card);border:1px solid var(--border-strong);font-size:16px;line-height:1;cursor:pointer;color:var(--ink);display:flex;align-items:center;justify-content:center;transition:all .25s ease}
+.modal-close:hover{background:var(--ink);color:var(--bg);transform:rotate(90deg)}
+.modal-content{display:none;padding:6px 34px 44px}
+.modal-content.active{display:block}
+.m-cover{display:flex;gap:26px;align-items:center;padding:26px 0 10px;border-bottom:1px dashed var(--border-strong);margin-bottom:30px}
+.m-cover-info{flex:1}
+.m-cover-tag{display:inline-block;font-size:10.5px;font-weight:600;color:var(--primary);background:var(--primary-soft);padding:5px 14px;border-radius:100px;margin-bottom:14px}
+.m-cover-info h3{font-size:clamp(1.25rem,2.5vw,1.6rem);line-height:1.4;margin-bottom:10px}
+.m-sub{font-size:.9rem;color:var(--muted);margin-bottom:14px}
+.m-cover-img{width:38%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius-sm);border:1px solid var(--border-strong);box-shadow:var(--shadow-soft)}
+.m-screen{margin-top:38px}
+.m-screen h4{display:flex;align-items:center;gap:12px;font-size:1.15rem;margin-bottom:14px}
+.m-screen h4::before{content:"";width:8px;height:22px;border-radius:6px;background:var(--primary)}
+.m-lead{font-size:1rem;color:var(--muted);margin-top:14px}
+.m-lead b{color:var(--ink)}
+.m-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:18px}
+.m-stat{background:var(--card);border:1px solid var(--border-strong);border-radius:var(--radius-md);padding:20px 12px;text-align:center;transition:transform .3s var(--ease),box-shadow .3s ease}
+.m-stat:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}
+.m-stat .num{display:block;font-size:1.65rem;color:var(--primary);line-height:1.2}
+.m-stat.big{background:#e8dfd2;border-color:var(--border-strong)}
+.m-stat.big .num{font-size:2.1rem}
+.m-stat .cap{display:block;margin-top:6px;font-size:.82rem;color:var(--muted)}
+.m-pills{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.pill{display:inline-block;padding:5px 14px;border-radius:100px;font-size:11px;font-weight:600}
+.pill.p0{background:rgba(212,90,58,.14);color:var(--primary-deep)}
+.pill.p1{background:rgba(201,161,94,.2);color:#8a6a2f}
+.pill.p2{background:rgba(30,26,23,.08);color:#5a534a}
+.pill.blue{background:rgba(212,90,58,.14);color:var(--primary-deep)}
+.pill.mint{background:rgba(143,154,118,.2);color:#5f6b4a}
+.insight{border:1px solid var(--border-strong);border-radius:var(--radius-lg);padding:22px 24px;margin-top:20px;background:var(--card);transition:transform .3s var(--ease),box-shadow .3s ease}
+.insight:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}
+.insight-head{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.insight-head h5{font-size:1.1rem}
+.dot{width:11px;height:11px;border-radius:50%;flex:0 0 auto}
+.dot.blue{background:var(--primary)}.dot.pink{background:var(--pink)}.dot.mint{background:var(--mint)}.dot.yellow{background:var(--yellow)}.dot.coral{background:var(--coral)}.dot.lav{background:var(--lav)}
+.insight p{font-size:.93rem;color:var(--muted)}
+.insight p b{color:var(--primary)}
+.insight ul{margin:8px 0 0 20px;font-size:.92rem;color:var(--muted)}
+.insight ul li{margin-bottom:6px}
+.insight ul b{color:var(--primary)}
+.insight img{width:100%;border-radius:var(--radius-sm);margin-top:16px;border:1px solid var(--border-strong)}
+.mini-table{width:100%;border-collapse:collapse;margin-top:14px;font-size:.88rem}
+.mini-table th{background:var(--card);text-align:left;padding:9px 12px;border-bottom:1px solid var(--border-strong);font-weight:600}
+.mini-table td{padding:9px 12px;border-bottom:1px solid var(--border)}
+.table-wrap{overflow-x:auto;border:1px solid var(--border-strong);border-radius:var(--radius-sm);margin-top:14px}
+table.grid{width:100%;border-collapse:collapse;font-size:.88rem;min-width:760px}
+table.grid th{background:var(--card);text-align:left;padding:11px 12px;border-bottom:1px solid var(--border-strong);font-weight:600;white-space:nowrap}
+table.grid td{padding:11px 12px;border-bottom:1px solid var(--border);vertical-align:top}
+table.grid tr:last-child td{border-bottom:none}
+table.grid tr:hover td{background:rgba(212,90,58,.05)}
+tr.row-p0 td{background:rgba(212,90,58,.06)}
+tr.row-p1 td{background:rgba(201,161,94,.08)}
+tr.row-p2 td{background:rgba(30,26,23,.03)}
+.m-note{margin-top:12px;font-size:.82rem;color:var(--faint)}
+.m-two{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:8px}
+.m-two figure{border:1px solid var(--border-strong);border-radius:var(--radius-md);padding:12px;background:var(--card)}
+.m-two img{width:100%;border-radius:var(--radius-sm);border:1px solid var(--border-strong)}
+.m-two figcaption{margin-top:10px;font-size:.84rem;color:var(--muted);line-height:1.65}
+.findings{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:8px}
+.findings .insight{margin-top:0}
+.flow{background:var(--card);border:1px solid var(--border-strong);border-radius:var(--radius-sm);padding:14px 16px;font-size:.9rem;line-height:2;color:var(--muted)}
+.flow b{color:var(--primary)}
+.actions{display:grid;gap:12px;margin-top:12px}
+.action{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--border-strong);border-radius:var(--radius-md);padding:13px 15px;font-size:.9rem;transition:transform .3s var(--ease),box-shadow .3s ease}
+.action:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}
+.action .a-dot{width:24px;height:24px;flex:0 0 auto;border-radius:50%;background:var(--primary);color:#fff;font-family:var(--font-label);font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;margin-top:2px}
+.action p{color:var(--muted)}
+.action p b{color:var(--ink)}
+.loop{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:12px}
+.loop span{font-size:.82rem;font-weight:600;background:var(--card);border:1px solid var(--border-strong);border-radius:100px;padding:4px 12px}
+.loop .arrow{background:none;border:none;color:var(--primary);padding:0 2px}
+.principles{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:14px}
+.principle{border:1px solid var(--border-strong);border-radius:var(--radius-lg);padding:20px;background:var(--card);transition:transform .3s var(--ease),box-shadow .3s ease}
+.principle:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}
+.principle .p-num{font-size:10.5px;font-weight:600;color:var(--primary)}
+.principle h5{font-size:1.05rem;margin:6px 0 8px}
+.principle p{font-size:.87rem;color:var(--muted)}
+.big-screens{display:grid;gap:22px;margin-top:8px}
+.donut-chart{display:flex;gap:24px;align-items:center;flex-wrap:wrap;margin-top:16px;padding:18px 22px;background:var(--card);border:1px solid var(--border-strong);border-radius:var(--radius-md)}
+.donut-legend{display:flex;flex-direction:column;gap:10px;font-size:.88rem;color:var(--muted)}
+.donut-legend span{display:flex;align-items:center;gap:8px}
+.donut-legend i{width:12px;height:12px;border-radius:4px;display:inline-block}
+.donut-chart circle:nth-of-type(1){stroke:var(--primary)!important}
+.donut-chart circle:nth-of-type(2){stroke:var(--yellow)!important}
+.donut-chart circle:nth-of-type(3){stroke:var(--muted)!important}
+.donut-legend span:nth-of-type(1) i{background:var(--primary)!important}
+.donut-legend span:nth-of-type(2) i{background:var(--yellow)!important}
+.donut-legend span:nth-of-type(3) i{background:var(--muted)!important}
+@media (max-width:1024px){
+  .project-grid{grid-template-columns:repeat(2,1fr)}
+  .skill-grid.cols-4{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:860px){
+  .about-grid{grid-template-columns:1fr;gap:40px}
+  .about-photo{max-width:320px;margin:0 auto}
+  .m-cover{flex-direction:column;align-items:flex-start}
+  .m-cover-img{width:100%;max-width:480px}
+  .findings{grid-template-columns:1fr}
+  .principles{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .section{padding:84px 22px}
+  #hero{padding-top:130px}
+  .project-grid{grid-template-columns:1fr}
+  .skill-grid.cols-4{grid-template-columns:1fr 1fr}
+  .skill-grid.cols-2{grid-template-columns:1fr}
+  .m-two{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .nav{padding:14px 22px}
+  .modal{padding:0}
+  .modal-content{padding:6px 20px 34px}
+  .intro-brand{left:22px;top:22px}
+}
+@media (max-width:420px){
+  .skill-grid.cols-4{grid-template-columns:1fr}
+  .keyword{min-width:120px;flex:1 1 42%}
+}
+
+
+/* ================= 手账风改造 v2（新视觉规范） ================= */
+/* 纸张噪点纹理：全局叠加 */
+body::after{content:"";position:fixed;inset:0;z-index:9990;pointer-events:none;opacity:.06;mix-blend-mode:multiply;background-image:var(--grain);background-size:180px 180px}
+h1,h2,h3,h4,h5,h6{font-family:var(--font-display);font-weight:700}
+.hero-title,.section-title,.hello,.contact-intro,.pc-body h3,.m-cover-info h3,.m-screen h4,.insight-head h5,.principle h5,.exp h4,.skill-card h4,.sg-head h3,.m-stat .num,.m-stat .cap,.contact-card .val,.exp .org{font-weight:700;letter-spacing:-0.01em}
+::selection{background:var(--coral);color:var(--paper)}
+/* 导航：便利贴黄 + 深色文字 */
+.nav{background:var(--sticky);border-bottom:none;border-radius:0 0 24px 24px;box-shadow:none}
+.nav-links a{color:var(--ink)}
+.nav-links a:hover{color:var(--coral-deep)}
+.nav-links a::after{background:var(--coral)}
+.nav-logo b{color:var(--coral-deep)}
+/* 开场 */
+#intro{background:var(--paper)}
+.intro-brand span{color:var(--coral)}
+.pupil{box-shadow:0 0 0 1.5px rgba(44,24,16,.10)}
+.avatar-shadow{background:radial-gradient(ellipse at center,rgba(44,24,16,.12) 0%,rgba(44,24,16,0) 70%)}
+.intro-hint{color:var(--muted)}
+#flash{background:var(--paper)}
+#lightSweep::before{background:linear-gradient(100deg,transparent 0%,rgba(245,241,232,.95) 40%,rgba(232,93,78,.28) 62%,transparent 100%)}
+/* Hero */
+.blob-inner{background:#E9E0CE!important}
+#hero .blob:nth-of-type(1) .blob-inner{background:var(--sticky)!important}
+#hero .blob:nth-of-type(2) .blob-inner{background:var(--blush)!important}
+#contacts .blob:nth-of-type(1) .blob-inner{background:var(--grass)!important}
+#contacts .blob:nth-of-type(2) .blob-inner{background:var(--lav)!important}
+.hero-greet{background:var(--sticky);border:none;color:var(--ink);box-shadow:none}
+.hero-title .hl{background:linear-gradient(180deg,transparent 60%,rgba(232,93,78,.22) 60%)}
+.hero-title .hl-blue{color:var(--blue)}
+.keyword{border:none;box-shadow:none;color:var(--ink)}
+.keyword .doodle{display:block;width:34px;height:34px;margin:0 auto 8px}
+.k1{background:var(--sticky)!important;transform:rotate(-2deg)}
+.k2{background:var(--grass)!important;transform:rotate(1.6deg)}
+.k3{background:var(--blush)!important;transform:rotate(-1.2deg)}
+.k1:hover,.k2:hover,.k3:hover{transform:rotate(0deg) scale(1.04);filter:brightness(1.04)}
+.hero-school .dot{background:var(--coral)}
+.hero-school .dot:nth-child(2){background:var(--blue)}
+.scroll-cue{border-color:var(--ink2)}
+.scroll-cue::after{background:var(--coral)}
+/* About */
+.about-photo .blob-bg{background:linear-gradient(135deg,var(--grass),var(--sticky) 55%,var(--blush));transform:rotate(-4deg)}
+.about-photo img{border:9px solid var(--sticky);box-shadow:none;transform:rotate(1.6deg);border-radius:22px}
+.about-photo .tape{background:rgba(232,93,78,.30);box-shadow:none}
+.about-divider{border-color:var(--line)}
+.exp{border-color:var(--line)}
+.exp::before{box-shadow:0 0 0 4px rgba(232,93,78,.16)}
+.exp:nth-child(odd)::before{box-shadow:0 0 0 4px rgba(242,214,117,.30)}
+.section-label{color:var(--coral)}
+.section-label::before{background:var(--coral)}
+.section-sub{color:var(--muted)}
+/* 项目区：杂志错落排版 + 彩色纸块 */
+.project-grid{grid-template-columns:repeat(12,1fr);gap:30px;align-items:start}
+.project-card{--tilt:rotate(0deg);border:none;box-shadow:none;border-radius:var(--radius-xl);transform:var(--tilt);transition:transform .35s var(--ease),filter .35s ease}
+.project-card:nth-child(1){--tilt:rotate(-1.4deg);grid-column:1/6;background:var(--sticky)}
+.project-card:nth-child(2){--tilt:rotate(1.1deg);grid-column:6/13;background:var(--blush);margin-top:64px}
+.project-card:nth-child(3){--tilt:rotate(-.7deg);grid-column:4/10;background:var(--grass);margin-top:28px}
+.project-card:hover{transform:var(--tilt) rotate(0deg) scale(1.02);filter:brightness(1.04)}
+.pc-cover{background:#EAE1CE}
+.pc-num{background:rgba(245,241,232,.85);border:none;color:var(--coral-deep)}
+.pc-body h3{color:var(--ink)}
+.pc-sub{color:#6E5A4B}
+/* 标签：彩色胶囊 */
+.tag{border:none;background:rgba(44,24,16,.08);color:var(--ink);transition:background .25s ease,color .25s ease}
+.tag:hover{background:var(--coral);color:var(--paper)}
+.tag.t-blue{background:rgba(74,144,226,.20);color:#2C3E66}
+.tag.t-yellow{background:rgba(227,190,78,.45);color:#7A5E14}
+.tag.t-pink{background:rgba(224,86,200,.16);color:#8F2E80}
+.tag.t-mint{background:rgba(92,124,72,.25);color:#2F4A1E}
+.tag.t-lav{background:rgba(139,126,196,.22);color:#4E438F}
+.tag.t-coral{background:rgba(232,93,78,.16);color:#A23528}
+.tag.t-blue:hover,.tag.t-yellow:hover,.tag.t-pink:hover,.tag.t-mint:hover,.tag.t-lav:hover,.tag.t-coral:hover{background:var(--coral);color:var(--paper)}
+/* CTA：药丸按钮 */
+.pc-cta{background:var(--coral);color:var(--paper);padding:8px 18px;border-radius:100px;display:inline-flex;align-items:center;gap:6px;font-weight:700;transition:background .25s ease}
+.pc-cta::after{content:"→"}
+.project-card:hover .pc-cta{background:var(--coral-deep)}
+/* 技能区：淡草绿大纸块 */
+#skills{background:var(--grass);border-radius:36px;max-width:1160px;margin:48px auto;padding:96px 40px}
+.sg-tag{background:var(--sticky);border:none;color:var(--ink)}
+.skill-card{border:none;box-shadow:none;border-radius:24px;transition:transform .3s var(--ease),filter .3s ease}
+.skill-card:nth-child(1){background:var(--sticky);transform:rotate(-1.3deg)}
+.skill-card:nth-child(2){background:var(--blush);transform:rotate(1deg);margin-top:10px}
+.skill-card:nth-child(3){background:var(--lav);transform:rotate(-.8deg)}
+.skill-card:nth-child(4){background:var(--sticky);transform:rotate(1.2deg);margin-top:6px}
+.skill-card:hover{transform:rotate(0deg) scale(1.03);filter:brightness(1.05)}
+.skill-card .arrow{color:var(--coral-deep)}
+.sg-note{color:var(--coral-deep)}
+.sg-note::before{background:var(--coral)}
+/* 联系区 */
+.contact-intro .hl-blue{color:var(--blue)}
+.contact-card{border:none;box-shadow:none;border-radius:24px;transition:transform .3s var(--ease),filter .3s ease}
+.contact-card:nth-of-type(1){background:var(--sticky);transform:rotate(-1.2deg)}
+.contact-card:nth-of-type(2){background:var(--grass);transform:rotate(1deg);margin-top:14px}
+.contact-card:hover{transform:rotate(0deg) scale(1.03);filter:brightness(1.04)}
+.contact-card .lab{color:var(--muted)}
+.contact-card .doodle.ico{width:32px;height:32px;display:block;margin:0}
+.copy-btn{background:var(--coral);color:var(--paper);border:none;box-shadow:none;transition:background .25s ease,transform .25s ease}
+.copy-btn:hover{transform:scale(1.05);background:var(--coral-deep);box-shadow:none}
+.copy-btn.copied{background:var(--ink2)}
+#toast{background:var(--olive);color:var(--paper);box-shadow:none}
+/* 页脚：深橄榄绿 */
+footer{background:var(--olive);color:#E8DFC9;border-top:none}
+footer b{color:var(--sticky)}
+/* 弹窗 */
+.modal-overlay{background:rgba(44,24,16,.5)}
+.modal{background:var(--paper);border:none;border-radius:32px;box-shadow:none}
+.modal-close{background:var(--coral);border:none;color:var(--paper);box-shadow:none}
+.modal-close:hover{background:var(--coral-deep);color:var(--paper)}
+.m-cover{border-color:var(--line)}
+.m-cover-tag{background:rgba(232,93,78,.14);color:var(--coral-deep)}
+.m-cover-img{border:6px solid var(--sticky);border-radius:20px;box-shadow:none}
+.m-screen h4::before{background:var(--coral)}
+.m-stat{border:none;box-shadow:none;background:var(--sticky);transition:transform .3s var(--ease),filter .3s ease}
+.m-stat:nth-of-type(2){background:var(--grass)}
+.m-stat:nth-of-type(3){background:var(--blush)}
+.m-stat:nth-of-type(4){background:var(--lav)}
+.m-stat.big{background:var(--sticky)}
+.m-stat:hover{transform:rotate(0deg) scale(1.03);filter:brightness(1.04);box-shadow:none}
+.m-stat .num{color:var(--coral-deep)}
+.pill{border:none}
+.pill.p0{background:rgba(232,93,78,.16);color:#A23528}
+.pill.p1{background:rgba(227,190,78,.45);color:#7A5E14}
+.pill.p2{background:rgba(92,124,72,.22);color:#2F4A1E}
+.pill.blue{background:rgba(74,144,226,.20);color:#2C3E66}
+.pill.mint{background:rgba(92,124,72,.22);color:#2F4A1E}
+/* insight：彩色纸块 */
+.insight{border:none;box-shadow:none;border-radius:24px;transition:transform .3s var(--ease),filter .3s ease}
+.insight:nth-of-type(1){background:var(--sticky)}
+.insight:nth-of-type(2){background:var(--grass)}
+.insight:nth-of-type(3){background:var(--blush)}
+.insight:nth-of-type(4){background:var(--lav)}
+.insight:nth-of-type(5){background:var(--sticky)}
+.insight:hover{transform:rotate(0deg) scale(1.015);filter:brightness(1.03);box-shadow:none}
+.insight p b,.insight ul b{color:var(--coral-deep)}
+.insight img{border:none;border-radius:16px}
+.dot.blue{background:var(--blue)}.dot.pink{background:var(--rose)}.dot.mint{background:var(--grass-deep)}.dot.yellow{background:var(--sticky-deep)}.dot.coral{background:var(--coral)}.dot.lav{background:var(--lav)}
+/* 表格：纸感 + 柔和行色 */
+.mini-table th{background:var(--paper-deep);border-color:var(--line)}
+.mini-table td{border-color:var(--line)}
+.table-wrap{border:none;border-radius:20px;background:var(--paper-deep);padding:6px}
+table.grid th{background:var(--paper-deep);border-color:var(--line);color:var(--ink)}
+table.grid td{border-color:var(--line)}
+table.grid tr:hover td{background:rgba(242,214,117,.35)}
+tr.row-p0 td{background:rgba(232,93,78,.10)}
+tr.row-p1 td{background:rgba(227,190,78,.28)}
+tr.row-p2 td{background:rgba(92,124,72,.18)}
+.m-note{color:var(--faint)}
+.m-two figure{border:none;background:var(--paper-deep);border-radius:22px}
+.m-two img{border:none;border-radius:14px}
+.m-two figcaption{color:var(--muted)}
+/* findings / flow / action / principle */
+.flow{background:var(--paper-deep);border:none;border-radius:18px;color:var(--muted)}
+.flow b{color:var(--coral-deep)}
+.action{border:none;background:var(--sticky);border-radius:20px;box-shadow:none}
+.action:nth-of-type(even){background:var(--grass)}
+.action:hover{transform:rotate(0deg) scale(1.02);box-shadow:none}
+.action .a-dot{background:var(--coral);color:var(--paper)}
+.action p b{color:var(--ink)}
+.loop span{background:var(--paper-deep);border:none}
+.loop .arrow{color:var(--coral)}
+.principle{border:none;box-shadow:none;background:var(--blush);transition:transform .3s var(--ease),filter .3s ease}
+.principles .principle:nth-of-type(2){background:var(--lav)}
+.principles .principle:nth-of-type(3){background:var(--sticky)}
+.principle:hover{transform:rotate(0deg) scale(1.02);filter:brightness(1.03);box-shadow:none}
+.principle .p-num{color:var(--coral-deep)}
+/* donut */
+.donut-chart{background:var(--paper-deep);border:none;border-radius:22px}
+.donut-chart circle:nth-of-type(1){stroke:var(--coral)!important}
+.donut-chart circle:nth-of-type(2){stroke:var(--sticky-deep)!important}
+.donut-chart circle:nth-of-type(3){stroke:var(--blue)!important}
+.donut-legend span:nth-of-type(1) i{background:var(--coral)!important}
+.donut-legend span:nth-of-type(2) i{background:var(--sticky-deep)!important}
+.donut-legend span:nth-of-type(3) i{background:var(--blue)!important}
+.hl-inline{background:linear-gradient(180deg,transparent 60%,rgba(232,93,78,.20) 60%)}
+/* 手绘 doodle 尺寸 */
+.doodle{display:inline-block;vertical-align:middle;width:1.15em;height:1.15em;flex:0 0 auto}
+.doodle.ico{width:38px;height:38px;display:block;margin-bottom:12px}
+.doodle.kd{width:34px;height:34px;display:block;margin:0 auto 8px}
+.doodle.arr{width:18px;height:18px;animation:arrowBounce 1.4s ease-in-out infinite}
+.doodle.wave{width:19px;height:19px;animation:wave 2.4s ease-in-out infinite}
+.doodle.hi,.doodle.loc{width:1.05em;height:1.05em}
+.doodle.st{width:1em;height:1em}
+.doodle.st2{width:.95em;height:.95em;vertical-align:-0.05em}
+.doodle.gy{width:1em;height:1em}
+.doodle.cb{width:16px;height:16px}
+.doodle.cb.ok{width:18px;height:18px}
+/* 响应式修正 */
+@media (max-width:1024px){
+  .project-grid{grid-template-columns:1fr 1fr}
+  .project-card:nth-child(1){grid-column:auto;transform:rotate(-1deg)}
+  .project-card:nth-child(2){grid-column:auto;margin-top:0;transform:rotate(1deg)}
+  .project-card:nth-child(3){grid-column:auto;margin-top:0;transform:rotate(-.6deg)}
+}
+@media (max-width:640px){
+  .project-grid{grid-template-columns:1fr}
+  .project-card{transform:none!important;margin-top:0!important}
+  #skills{max-width:calc(100% - 24px);margin:24px 12px;padding:64px 22px;border-radius:28px}
+  .contact-card{transform:none!important;margin-top:0!important}
+}
+
+
+/* ============ v2b：全站彩色纸块强化（对齐技能区风格） ============ */
+/* 每个板块 = 一张大圆角彩色纸，板块之间留米色空隙 */
+.section{max-width:1160px;margin:44px auto;padding:84px 48px;border-radius:36px}
+#hero{background:linear-gradient(165deg,#F7E29B,#F2D675 55%,#EBCA66);text-align:center;padding:170px 48px 96px}
+#about{background:var(--paper);border:2px dashed #E4D9C2}
+#projects{background:var(--blush)}
+#skills{background:var(--grass);margin:44px auto;padding:96px 48px}
+#contacts{background:var(--sticky)}
+/* 导航：加一条虚线边与首页区分 */
+.nav{border-bottom:2px dashed rgba(44,24,16,.22)}
+/* 板块标签 = 贴纸药丸 */
+.section-label{background:rgba(245,241,232,.75);padding:6px 16px;border-radius:100px}
+/* Hero 内部：在黄色纸上的配色 */
+.hero-greet{background:var(--paper);color:var(--ink)}
+.hero-title .hl{background:linear-gradient(180deg,transparent 60%,rgba(255,255,255,.45) 60%)}
+.hero-title .hl-blue{color:var(--blue-deep)}
+.k1{background:var(--grass)!important}
+.k2{background:var(--blush)!important}
+.k3{background:var(--lav)!important}
+#hero .blob:nth-of-type(1) .blob-inner{background:#E7C65C!important}
+#hero .blob:nth-of-type(2) .blob-inner{background:#C99A9A!important}
+.hero-school .dot{background:var(--coral-deep)}
+.hero-school .dot:nth-child(2){background:var(--blue-deep)}
+/* About：照片彩色相框 + 经历做成贴纸卡 */
+.about-photo img{border:10px solid var(--sticky)}
+.about-photo .tape{background:rgba(232,93,78,.38);width:74px;height:26px}
+.about-photo .blob-bg{background:linear-gradient(135deg,var(--sticky),var(--blush) 55%,var(--grass))}
+.exp{background:var(--paper-deep);border-radius:20px;padding:16px 20px 18px;margin-bottom:14px;border-left:6px solid var(--coral)}
+.exp:nth-of-type(even){background:#F2E3CE;border-left-color:var(--blue)}
+.exp::before{box-shadow:0 0 0 4px rgba(232,93,78,.18)}
+.exp:nth-child(odd)::before{box-shadow:0 0 0 4px rgba(74,144,226,.18)}
+/* Projects：粉色纸上的彩色卡，封面图片加彩色衬底 */
+.pc-cover{background:transparent;margin:14px 14px 0;border-radius:20px}
+.pc-cover img{border-radius:16px}
+.project-card:nth-child(1){background:var(--sticky)}
+.project-card:nth-child(2){background:var(--grass)}
+.project-card:nth-child(3){background:var(--lav)}
+.project-card:nth-child(3) .pc-body h3,.project-card:nth-child(3) .pc-body .pc-sub{color:#F5F1E8}
+.project-card:nth-child(3) .tag{background:rgba(245,241,232,.25);color:#F5F1E8}
+.project-card:nth-child(3) .tag:hover{background:var(--coral);color:#fff}
+.project-card:nth-child(3) .pc-cta{background:var(--paper);color:var(--coral-deep)}
+/* Contacts：黄色纸上的卡片 */
+.contact-card:nth-of-type(1){background:var(--paper);transform:rotate(-1.2deg)}
+.contact-card:nth-of-type(2){background:var(--grass);transform:rotate(1deg);margin-top:14px}
+.contact-card .val{color:var(--ink)}
+#contacts .blob:nth-of-type(1) .blob-inner{background:#E3C65A!important}
+#contacts .blob:nth-of-type(2) .blob-inner{background:#BDCC9E!important}
+.copy-btn{background:var(--coral);color:var(--paper)}
+/* 页脚 = 深橄榄圆角大纸 */
+footer{max-width:1160px;margin:44px auto 0;border-radius:36px 36px 0 0;padding:56px 32px 60px}
+/* 弹窗封面 = 黄色贴纸头 */
+.m-cover{background:var(--sticky);border-radius:28px;padding:26px 28px 20px;border:none;margin-bottom:30px}
+.m-cover-tag{background:rgba(245,241,232,.85);color:var(--coral-deep)}
+.m-cover-img{border:6px solid var(--paper);border-radius:18px}
+/* 移动端修正 */
+@media (max-width:860px){
+  .section{padding:64px 22px;border-radius:28px;margin:28px 12px}
+  #hero{padding:150px 22px 72px}
+  #skills{padding:72px 22px}
+}
+
+
+/* ============ v2c：取消彩色全铺，回归米纸底 + 彩色卡片点缀 ============ */
+.section{background:none!important;border:none!important;max-width:1120px!important;margin:0 auto!important;padding:110px 32px!important;border-radius:0!important}
+#hero{background:var(--paper)!important;padding-top:170px!important}
+#about{background:var(--paper)!important}
+#projects{background:var(--paper)!important}
+#contacts{background:var(--paper)!important}
+#skills{background:var(--grass);border-radius:36px;max-width:1160px;margin:48px auto;padding:96px 40px}
+/* Hero 内配色回归米纸版 */
+.hero-greet{background:var(--sticky);color:var(--ink)}
+.hero-title .hl{background:linear-gradient(180deg,transparent 60%,rgba(232,93,78,.22) 60%)}
+.hero-title .hl-blue{color:var(--blue)}
+.k1{background:var(--sticky)!important}
+.k2{background:var(--grass)!important}
+.k3{background:var(--blush)!important}
+#hero .blob:nth-of-type(1) .blob-inner{background:var(--sticky)!important}
+#hero .blob:nth-of-type(2) .blob-inner{background:var(--blush)!important}
+/* 板块标签 = 黄色小贴纸 */
+.section-label{background:var(--sticky);color:var(--ink);padding:6px 16px;border-radius:100px}
+.section-label::before{background:var(--coral)}
+/* 联系卡回米纸版 */
+#contacts .contact-card:nth-of-type(1){background:var(--sticky)}
+#contacts .contact-card:nth-of-type(2){background:var(--grass)}
+#contacts .blob:nth-of-type(1) .blob-inner{background:var(--grass)!important}
+#contacts .blob:nth-of-type(2) .blob-inner{background:var(--lav)!important}
+/* 页脚保持深橄榄圆角纸 */
+footer{max-width:1160px;margin:44px auto 0;border-radius:36px 36px 0 0;padding:56px 32px 60px}
+
+
+/* v2d：修复技能区绿纸块 */
+#skills{background:var(--grass)!important;border-radius:36px;max-width:1160px;margin:48px auto;padding:96px 40px}
+
+
+/* ============ v3：6 点修改 ============ */
+/* 1) 瞳孔锁进眼眶容器（overflow:hidden + JS 限位双保险） */
+.pupil-wrap{position:absolute;left:38%;top:36%;height:15.4%;aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;overflow:hidden;z-index:5;pointer-events:none;will-change:transform}
+#eyeR{left:56%}
+#pupilL,#pupilR{left:50%!important;top:50%!important;width:17px;height:17px;box-shadow:none}
+/* 2) Hero：删除黄色 pill，四个等宽标签严格对齐 */
+.hero-greet{display:none!important}
+.keywords{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:920px;margin:48px auto 0;align-items:stretch}
+.keyword{min-width:0!important;margin:0;transform:none!important;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:24px 12px;border-radius:24px;border:none;box-shadow:none;font-weight:700;font-size:1rem}
+.keyword .doodle{display:block;width:34px;height:34px;margin:0}
+.k1{background:var(--sticky)!important}
+.k2{background:var(--grass)!important}
+.k3{background:var(--blush)!important}
+.k4{background:#93C5FD!important}
+.keyword:hover{transform:scale(1.04)!important;filter:brightness(1.05)}
+/* 3) About 标语 */
+#about .section-title{max-width:760px;line-height:1.35}
+/* 4) 校园经历点击 + 灯箱 */
+.exp-card{cursor:pointer;transition:transform .25s var(--ease),filter .25s ease}
+.exp-card:hover{transform:rotate(0deg) scale(1.015);filter:brightness(1.03)}
+.exp-card .exp-hint{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-size:11px;font-weight:700;color:var(--coral-deep);font-family:var(--font-label);text-transform:uppercase;letter-spacing:.06em}
+.elb-head{display:flex;align-items:center;gap:10px;margin-bottom:18px}
+.elb-head .elb-dot{width:12px;height:12px;border-radius:50%;background:var(--coral);flex:0 0 auto}
+.elb-head h3{font-size:1.25rem;font-family:var(--font-display);font-weight:700}
+.elb-grid{display:flex;flex-wrap:wrap;gap:16px;justify-content:center}
+.elb-grid img{width:250px;height:180px;object-fit:cover;border-radius:16px;border:4px solid var(--sticky)}
+.elb-caption{margin-top:22px;text-align:center;font-size:.95rem;line-height:1.75;background:var(--sticky);color:var(--ink);padding:14px 20px;border-radius:16px}
+/* 5) Projects：封面统一高度（项目一二三都一样） */
+.pc-cover{height:210px;aspect-ratio:auto}
+/* Step 区块 + 数据表格（斑马纹圆角） */
+.step-badge{display:inline-block;background:var(--coral);color:var(--paper);font-family:var(--font-label);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 14px;border-radius:100px;margin-bottom:10px}
+.tbl-wrap{overflow-x:auto;border-radius:18px;margin-top:12px;background:var(--paper-deep);padding:8px}
+.tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:.82rem;min-width:840px}
+.tbl th{background:var(--sticky);color:var(--ink);padding:9px 10px;text-align:left;font-weight:700;white-space:nowrap}
+.tbl td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.tbl tbody tr:nth-child(even){background:rgba(242,214,117,.20)}
+.tbl tbody tr:hover{background:rgba(232,93,78,.08)}
+.tbl th:first-child{border-radius:12px 0 0 0}
+.tbl th:last-child{border-radius:0 12px 0 0}
+/* 横向柱状图 */
+.hbars{display:flex;flex-direction:column;gap:9px;margin-top:14px}
+.hbar{display:flex;align-items:center;gap:10px}
+.hbar .hl{width:112px;flex:0 0 auto;font-size:.8rem;text-align:right;color:var(--muted)}
+.hbar .track{flex:1;background:var(--paper-deep);border-radius:100px;height:18px;overflow:hidden}
+.hbar .fill{height:100%;border-radius:100px}
+.hbar .hv{width:40px;flex:0 0 auto;font-size:.8rem;font-weight:700;color:var(--ink)}
+/* 四象限散点 */
+.quad-wrap{margin-top:14px;text-align:center}
+.quad{width:100%;max-width:520px;height:auto}
+/* 分组柱状图 */
+.gbar-chart{margin-top:14px}
+.gbar-legend{display:flex;gap:16px;justify-content:center;margin-bottom:12px;font-size:.8rem;color:var(--muted);flex-wrap:wrap}
+.gbar-legend span{display:flex;align-items:center;gap:6px}
+.gbar-legend i{width:12px;height:12px;border-radius:4px;display:inline-block}
+.gbars{display:flex;gap:14px;align-items:flex-end;justify-content:center;height:200px}
+.gbar-group{display:flex;flex-direction:column;align-items:center;gap:6px;flex:1;max-width:96px}
+.gbar-group .bars{display:flex;gap:5px;align-items:flex-end;height:170px}
+.gbar{position:relative;width:18px;border-radius:5px 5px 0 0}
+.gbar .gval{position:absolute;bottom:calc(100% + 3px);left:0;right:0;font-size:.6rem;font-weight:700;text-align:center;color:var(--ink);white-space:nowrap}
+.gbar-group .gl{font-size:.78rem;color:var(--muted)}
+/* 雷达图 */
+.radar-wrap{margin-top:14px;text-align:center}
+.radar{width:100%;max-width:440px;height:auto}
+.radar-legend{display:flex;gap:14px;justify-content:center;margin-top:8px;font-size:.8rem;color:var(--muted);flex-wrap:wrap}
+.radar-legend span{display:flex;align-items:center;gap:6px}
+.radar-legend i{width:12px;height:12px;border-radius:50%;display:inline-block}
+.chart-note{margin-top:10px;font-size:.8rem;color:var(--faint)}
+/* 移动端：关键词 2x2 换行、灯箱图片自适应 */
+@media (max-width:640px){
+  .keywords{grid-template-columns:1fr 1fr;gap:12px}
+  .keyword{padding:18px 8px}
+  .elb-grid img{width:100%;height:auto;max-height:220px}
+}
+
+
+/* ============ v4：Hero标题防孤字+四卡顺序、校园单列大图、项目占位大图、背景色 ============ */
+:root{--bg:#faf8f6;--paper:#faf8f6}
+/* Hero 标题：缩小一档，禁止孤字 */
+#hero .hero-title{font-size:clamp(2.1rem,5.4vw,3.5rem)}
+.title-br{display:block}
+/* 四卡顺序配色：数据驱动(黄)/需求转化(淡蓝)/AI落地(绿)/内容策划(粉) */
+.k2{background:#93C5FD!important}
+.k3{background:var(--grass)!important}
+.k4{background:var(--blush)!important}
+/* 校园经历灯箱：单列竖版大图，禁止裁剪 */
+.elb-grid{display:flex;flex-direction:column;align-items:stretch;gap:0}
+.elb-grid img{width:100%;max-width:100%;height:auto;object-fit:contain;border:none;border-radius:0;margin-bottom:36px}
+.elb-grid img:last-child{margin-bottom:0}
+.elb-caption{margin-top:26px}
+/* 项目详情：占位大图 + 洞察说明 */
+.pj-img{width:100%;height:auto;border-radius:16px;margin-top:12px}
+.pj-fig{margin-top:4px}
+.pj-fig figcaption{margin-top:12px;font-size:.9rem;line-height:1.75;color:var(--muted);background:var(--paper-deep);padding:12px 16px;border-radius:14px}
+.pj-stack{display:flex;flex-direction:column;gap:32px;margin-top:14px}
+</style>
+</head>
+<body class="locked">
+<svg style="display:none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <symbol id="d-funnel" viewBox="0 0 32 32"><path d="M6 6 h20 l-7 10 v9 h-6 v-9 Z" fill="#93C5FD" stroke="#2C1810" stroke-width="2" stroke-linejoin="round"/><path d="M13 26 h6" stroke="#2C1810" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="d-arrow" viewBox="0 0 32 32"><path d="M16 27 L16 9" stroke="#E85D4E" stroke-width="2.8" stroke-linecap="round" fill="none"/><path d="M7 18 L16 7 L25 18" fill="none" stroke="#E85D4E" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 27 h12" stroke="#2C1810" stroke-width="2.4" stroke-linecap="round" fill="none"/></symbol>
+  <symbol id="d-wave" viewBox="0 0 32 32"><path d="M9 18 c-1-4 0-8 3-10 1.6-1.1 3.6-.7 4.4 .9 .8 1.6-.2 3-1.4 3.6 -1.2.6-2.4.4-2.9 1.6 -.5 1.2 .3 2.4 1.6 2.9 1.3.5 2.9 0 4-1 1.1-1 2.8-1 3.7 0 1 1.1 1 2.9 0 4 -1 1.1-2.6 1.5-3.5 2.7" fill="none" stroke="#E85D4E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 18 v7" stroke="#2C1810" stroke-width="2.2" stroke-linecap="round" fill="none"/></symbol>
+  <symbol id="d-chart" viewBox="0 0 32 32"><path d="M5 25 L5 8" stroke="#2C1810" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M5 25 L28 25" stroke="#2C1810" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M9 22 L14 15 L18 18 L24 8" fill="none" stroke="#4A90E2" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M20.5 8 L24 8 L24 11.5" fill="none" stroke="#4A90E2" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="22" r="1.8" fill="#E85D4E"/><circle cx="14" cy="15" r="1.8" fill="#E85D4E"/><circle cx="18" cy="18" r="1.8" fill="#E85D4E"/><circle cx="24" cy="8" r="1.8" fill="#E85D4E"/></symbol>
+  <symbol id="d-robot" viewBox="0 0 32 32"><rect x="7" y="10" width="18" height="13" rx="4" fill="#B8D4A8" stroke="#2C1810" stroke-width="2"/><path d="M12 10 V6 M20 10 V6" stroke="#2C1810" stroke-width="2.2" stroke-linecap="round" fill="none"/><circle cx="12.5" cy="16" r="1.7" fill="#2C1810"/><circle cx="19.5" cy="16" r="1.7" fill="#2C1810"/><path d="M11 21.5 h10" stroke="#2C1810" stroke-width="1.8" stroke-linecap="round" fill="none"/></symbol>
+  <symbol id="d-pen" viewBox="0 0 32 32"><path d="M7 27 L10 18 L21 7 c1.6-1.6 4.4-1.6 6 0 1.6 1.6 1.6 4.4 0 6 L16 24 L7 27 Z" fill="#F2D675" stroke="#2C1810" stroke-width="2" stroke-linejoin="round"/><path d="M19.5 9 L24.5 14" stroke="#2C1810" stroke-width="1.6" stroke-linecap="round"/><path d="M5 27 c4-.6 6-1.8 7-4" stroke="#2C1810" stroke-width="1.6" stroke-linecap="round" fill="none"/></symbol>
+  <symbol id="d-pin" viewBox="0 0 32 32"><path d="M16 4.5 c-5.6 0-9.5 4-9.5 9.2 0 7 9.5 14.3 9.5 14.3 s9.5-7.3 9.5-14.3 c0-5.2-3.9-9.2-9.5-9.2 Z" fill="#E85D4E" stroke="#2C1810" stroke-width="2" stroke-linejoin="round"/><circle cx="16" cy="13.8" r="3.4" fill="#F5F1E8" stroke="#2C1810" stroke-width="1.8"/></symbol>
+  <symbol id="d-db" viewBox="0 0 32 32"><ellipse cx="16" cy="9" rx="10" ry="4" fill="#B8D4A8" stroke="#2C1810" stroke-width="2"/><path d="M6 9 v13.5 c0 2.2 4.5 4 10 4 s10-1.8 10-4 V9" fill="#B8D4A8" stroke="#2C1810" stroke-width="2"/><path d="M6 15.8 c0 2.2 4.5 4 10 4 s10-1.8 10-4" fill="none" stroke="#2C1810" stroke-width="2"/></symbol>
+  <symbol id="d-bar" viewBox="0 0 32 32"><rect x="5" y="17" width="6" height="10" rx="2" fill="#4A90E2" stroke="#2C1810" stroke-width="1.8"/><rect x="13" y="11" width="6" height="16" rx="2" fill="#E85D4E" stroke="#2C1810" stroke-width="1.8"/><rect x="21" y="5" width="6" height="22" rx="2" fill="#F2D675" stroke="#2C1810" stroke-width="1.8"/></symbol>
+  <symbol id="d-flask" viewBox="0 0 32 32"><path d="M13 5 h6 M13 5 v6.5 l6 12 c.7 1.4 0 3.5-1.7 3.5 h-6.6 c-1.7 0-2.4-2.1-1.7-3.5 l6-12 Z" fill="#D4A5A5" stroke="#2C1810" stroke-width="2" stroke-linejoin="round"/><path d="M11.5 21 h9" stroke="#2C1810" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="d-gear" viewBox="0 0 32 32"><circle cx="16" cy="16" r="5.2" fill="#8B7EC4" stroke="#2C1810" stroke-width="2"/><path d="M16 5.5 v4 M16 22.5 v4 M5.5 16 h4 M22.5 16 h4 M8.6 8.6 l2.8 2.8 M20.6 20.6 l2.8 2.8 M23.4 8.6 l-2.8 2.8 M11.4 20.6 l-2.8 2.8" stroke="#2C1810" stroke-width="2.2" stroke-linecap="round"/><circle cx="16" cy="16" r="1.6" fill="#2C1810"/></symbol>
+  <symbol id="d-spark" viewBox="0 0 32 32"><path d="M16 4 c1.2 5.5 4 8.8 9.5 10 -5.5 1.2 -8.3 4.5 -9.5 10 -1.2 -5.5 -4 -8.8 -9.5 -10 5.5 -1.2 8.3 -4.5 9.5 -10 Z" fill="#F2D675" stroke="#2C1810" stroke-width="1.7" stroke-linejoin="round"/><path d="M24.5 20 l1.3 3.4 3.4 1.3 -3.4 1.3 -1.3 3.4 -1.3 -3.4 -3.4 -1.3 3.4 -1.3 Z" fill="#E056C8" stroke="#2C1810" stroke-width="1.3" stroke-linejoin="round"/></symbol>
+  <symbol id="d-brain" viewBox="0 0 32 32"><path d="M16 7.5 c-1.2-2.6-5.2-2.2-6.2 .5 -3 .3-4.3 4-2.2 6.1 -1.4 2.8 1.2 5.7 3.9 4.8 .5 2.7 3.8 3.6 5.3 1.5 1.5 2.1 4.8 1.2 5.3-1.5 2.7 .9 5.3-2 3.9-4.8 2.1-2.1 .8-5.8-2.2-6.1 -1-2.7-5-3.1-6.2-.5 Z" fill="#D4A5A5" stroke="#2C1810" stroke-width="1.8" stroke-linejoin="round"/><path d="M13 12 c1 1.6 1 2.6 0 4.2 M17 10.5 c-1 1.6-1 2.6 0 4.2 M19.5 14.5 c1 1 1 2.2 0 3.4" fill="none" stroke="#2C1810" stroke-width="1.3" stroke-linecap="round"/></symbol>
+  <symbol id="d-nodes" viewBox="0 0 32 32"><circle cx="9" cy="9" r="3" fill="#F2D675" stroke="#2C1810" stroke-width="1.8"/><circle cx="23" cy="9" r="3" fill="#B8D4A8" stroke="#2C1810" stroke-width="1.8"/><circle cx="16" cy="24" r="3" fill="#D4A5A5" stroke="#2C1810" stroke-width="1.8"/><path d="M12 9 h8 M10.6 11.4 L13.8 21 M21.4 11.4 L18.2 21" stroke="#2C1810" stroke-width="1.6" stroke-linecap="round" fill="none"/></symbol>
+  <symbol id="d-book" viewBox="0 0 32 32"><path d="M16 8.5 c-2.6-2.2-6.4-2.2-8.5-.6 v15.6 c2.1-1.6 5.9-1.6 8.5 .6 2.6-2.2 6.4-2.2 8.5-.6 V7.9 c-2.1-1.6-5.9-1.6-8.5 .6 Z" fill="#F2D675" stroke="#2C1810" stroke-width="1.8" stroke-linejoin="round"/><path d="M16 8.5 v15.6" stroke="#2C1810" stroke-width="1.6"/></symbol>
+  <symbol id="d-mail" viewBox="0 0 32 32"><rect x="5" y="8.5" width="22" height="16" rx="3.5" fill="#F2D675" stroke="#2C1810" stroke-width="2"/><path d="M6.5 10.5 L16 18 L25.5 10.5" fill="none" stroke="#2C1810" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="d-phone" viewBox="0 0 32 32"><rect x="10" y="4.5" width="12" height="23" rx="3.5" fill="#B8D4A8" stroke="#2C1810" stroke-width="2"/><path d="M14 24.5 h4" stroke="#2C1810" stroke-width="1.7" stroke-linecap="round"/></symbol>
+  <symbol id="d-copy" viewBox="0 0 32 32"><rect x="8" y="7.5" width="16" height="20" rx="3" fill="#D4A5A5" stroke="#2C1810" stroke-width="2"/><path d="M12 7.5 V4.5 h8 v3" fill="none" stroke="#2C1810" stroke-width="2"/><path d="M12 15 h8 M12 19 h8 M12 23 h5" stroke="#2C1810" stroke-width="1.8" stroke-linecap="round" fill="none"/></symbol>
+  <symbol id="d-check" viewBox="0 0 32 32"><path d="M6 17 l7 7 L27 8" fill="none" stroke="#F5F1E8" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="d-star" viewBox="0 0 32 32"><path d="M16 4.5 l3.6 7.4 8 .9 -5.9 5.4 1.6 7.9 -7.3-3.9 -7.3 3.9 1.6-7.9 -5.9-5.4 8-.9 Z" fill="#F2D675" stroke="#2C1810" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+  <symbol id="d-sync" viewBox="0 0 32 32"><path d="M7.5 17.5 A8.5 8.5 0 0 0 16 25 A8.5 8.5 0 0 0 24.5 17.5" fill="none" stroke="#4A90E2" stroke-width="2.6" stroke-linecap="round"/><path d="M21 16.5 l3.8 1 .9 -3.9" fill="none" stroke="#4A90E2" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M24.5 14.5 A8.5 8.5 0 0 0 16 7 A8.5 8.5 0 0 0 7.5 14.5" fill="none" stroke="#E85D4E" stroke-width="2.6" stroke-linecap="round"/><path d="M11 15.5 l-3.8-1 -.9 3.9" fill="none" stroke="#E85D4E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="d-compass" viewBox="0 0 32 32"><circle cx="16" cy="16" r="11" fill="#F5F1E8" stroke="#2C1810" stroke-width="2"/><path d="M16 6 v20 M6 16 h20" stroke="#2C1810" stroke-width="1" opacity=".5"/><path d="M16 10 L19 16 L16 22 L13 16 Z" fill="#E85D4E" stroke="#2C1810" stroke-width="1.5" stroke-linejoin="round"/><circle cx="16" cy="16" r="1.4" fill="#2C1810"/></symbol>
+
+  <symbol id="d-warn" viewBox="0 0 32 32"><path d="M16 5 L29 27 H3 Z" fill="#F2D675" stroke="#2C1810" stroke-width="2" stroke-linejoin="round"/><path d="M16 12 v8" stroke="#2C1810" stroke-width="2.4" stroke-linecap="round"/><circle cx="16" cy="24" r="1.6" fill="#2C1810"/></symbol></svg>
+
+<!-- ================= 开场：简笔画形象 ================= -->
+<section id="intro">
+  <div class="intro-brand">李琳娜 <span>·</span> Linna</div>
+  <div class="intro-dots"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="avatar-wrap">
+    <div class="avatar-stage" id="avatarStage" title="点击进入作品集">
+      <img id="avatarImg" src="./images/avatar.svg"
+           onerror="window.imgFallback(this,'我的卡通头像','./images/avatar.svg')" alt="李琳娜卡通头像">
+      <div class="pupil-wrap" id="eyeL"><div class="pupil" id="pupilL"></div></div>
+      <div class="pupil-wrap" id="eyeR"><div class="pupil" id="pupilR"></div></div>
+    </div>
+    <div class="avatar-shadow" id="avatarShadow"></div>
+  </div>
+  <div class="intro-hint"><span class="arr"><svg class="doodle arr" aria-hidden="true"><use href="#d-arrow"></use></svg></span> 点击我，进入我的作品集</div>
+</section>
+
+<!-- ================= 过渡特效层 ================= -->
+<canvas id="fxCanvas"></canvas>
+<div id="flash"></div>
+<div id="lightSweep"></div>
+
+<!-- ================= 导航 ================= -->
+<nav class="nav" id="nav">
+  <div class="nav-logo">李琳娜<b>·</b>Linna</div>
+  <div class="nav-links">
+    <a href="#about">关于我</a>
+    <a href="#projects">项目作品</a>
+    <a href="#skills">技能栈</a>
+    <a href="#contacts">联系我</a>
+  </div>
+</nav>
+
+<main id="main">
+
+  <!-- ================= Hero ================= -->
+  <section class="section" id="hero">
+    <div class="blob" data-parallax="0.25"><span class="blob-inner" style="background:#F2D675"></span></div>
+    <div class="blob" data-parallax="0.4"><span class="blob-inner" style="background:#D4A5A5"></span></div>
+
+    
+    <h1 class="hero-title reveal">
+      <span class="hl">一个懂数据</span>的文科生
+      <span class="line2">正在<span class="hl-blue">AI产品运营</span>的路上<br class="title-br">死磕自己</span>
+    </h1>
+
+    <div class="keywords reveal" style="transition-delay:.12s">
+      <div class="keyword k1"><svg class="doodle kd" aria-hidden="true"><use href="#d-chart"></use></svg>数据驱动</div>
+      <div class="keyword k2"><svg class="doodle kd" aria-hidden="true"><use href="#d-funnel"></use></svg>需求转化</div>
+      <div class="keyword k3"><svg class="doodle kd" aria-hidden="true"><use href="#d-robot"></use></svg>AI落地</div>
+      <div class="keyword k4"><svg class="doodle kd" aria-hidden="true"><use href="#d-pen"></use></svg>内容策划</div>
+    </div>
+
+    <div class="hero-school reveal" style="transition-delay:.2s">
+      <span class="dot"></span>湖南财政经济学院 · 汉语言文学<span class="dot"></span>
+    </div>
+    <div class="scroll-cue reveal" style="transition-delay:.28s"></div>
+  </section>
+
+  <!-- ================= About ================= -->
+  <section class="section" id="about">
+    <span class="section-label reveal">01 · About Me</span>
+    <h2 class="section-title reveal">感性让我发现痛点，理性让我证明它</h2>
+
+    <div class="about-grid">
+      <div class="about-photo reveal">
+        <div class="blob-bg"></div>
+        <div class="tape"></div>
+        <img src="./images/about_me_photo.jpg" loading="lazy"
+             onerror="window.imgFallback(this,'我的照片','./images/about_me_photo.jpg')" alt="李琳娜的照片">
+      </div>
+
+      <div class="about-txt reveal" style="transition-delay:.1s">
+        <div class="hello">你好，我是李琳娜 <svg class="doodle hi" aria-hidden="true"><use href="#d-wave"></use></svg></div>
+        <div class="tagline">一个懂数据的文科生，正在AI产品运营的路上死磕自己。</div>
+        <hr class="about-divider">
+        <div class="about-meta"><svg class="doodle loc" aria-hidden="true"><use href="#d-pin"></use></svg> 湖南财政经济学院 · 汉语言文学</div>
+
+        <div class="exp-block">
+          <div class="exp-title">校园经历</div>
+          <div class="exp exp-card" data-modal="modal-exp1" role="button" tabindex="0" aria-label="查看文旅志愿服务支队照片"><div class="org">学院文旅志愿服务支队外联部 · 干事</div>
+            <h4>活动全流程统筹与流程提效</h4>
+            <p>负责橘子洲志愿活动全流程统筹，用<span class="hl-inline">在线报名表</span>替代群聊接龙，信息触达周期从<b>3天</b>压缩至<b>1.5天</b>；建立签到SOP，保障<b>12场</b>活动落地，累计登记志愿者<b>200+</b>人次。</p>
+            <span class="exp-hint">查看现场照片 →</span>
+          </div>
+          <div class="exp exp-card" data-modal="modal-exp2" role="button" tabindex="0" aria-label="查看公众号运营照片"><div class="org">学院《人文评鉴》公众号 · 内容运营</div>
+            <h4>内容策划与 AI 工作流探索</h4>
+            <p>参与公众号内容策划与编辑，尝试将<span class="hl-inline">AI工具</span>融入工作流，辅助初稿生成，让内容生产效率更高。</p>
+            <span class="exp-hint">查看现场照片 →</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ================= Projects ================= -->
+  <section class="section" id="projects">
+    <span class="section-label reveal">02 · Projects</span>
+    <h2 class="section-title reveal">用数据与流程，把运营做成闭环</h2>
+    <p class="section-sub reveal">以下三个项目覆盖AI产品运营的核心能力闭环：从用户反馈的收集与清洗，到数据驱动的优先级决策；从多模型效能评测与场景化选型，到AI生成内容的质量管控与SOP沉淀。每个项目均包含真实数据集、SQL分析、统计验证及可落地的运营策略。</p>
+
+    <div class="project-grid">
+      <!-- 项目一 -->
+      <article class="project-card reveal" data-modal="modal-p1" role="button" tabindex="0" aria-label="查看项目一详情">
+        <div class="pc-cover">
+          <span class="pc-num">PROJECT 01</span>
+          <img src="./images/项目1_PowerBI看板.png" loading="lazy"
+               onerror="window.imgFallback(this,'项目1 · PowerBI 看板','./images/项目1_PowerBI看板.png')" alt="项目一封面：PowerBI 看板">
+        </div>
+        <div class="pc-body">
+          <h3>AI写作工具用户反馈数据分析与产品迭代</h3>
+          <p class="pc-sub">χ²=86.633, p&lt;0.001 · 150条有效反馈 · P0需求3项 / P1需求5项 / P2需求6项</p>
+          <div class="tag-row">
+            <span class="tag t-blue">SQL</span><span class="tag t-yellow">Power BI</span>
+            <span class="tag t-pink">SPSS</span><span class="tag t-mint">用户反馈闭环</span>
+          </div>
+          <span class="pc-cta">查看项目详情</span>
+        </div>
+      </article>
+
+      <!-- 项目二 -->
+      <article class="project-card reveal" data-modal="modal-p2" role="button" tabindex="0" aria-label="查看项目二详情" style="transition-delay:.1s">
+        <div class="pc-cover">
+          <span class="pc-num">PROJECT 02</span>
+          <img src="./images/项目2_选型矩阵封面.png" loading="lazy"
+               onerror="window.imgFallback(this,'项目2 · 选型矩阵封面','./images/项目2_选型矩阵封面.png')" alt="项目二封面：7大场景选型矩阵">
+        </div>
+        <div class="pc-body">
+          <h3>AI产品运营效能提升方案</h3>
+          <p class="pc-sub">7款模型 × 36题 = 168条数据 · 要素漏缺占扣分 61.5% → 4维质检SOP</p>
+          <div class="tag-row">
+            <span class="tag t-lav">Prompt工程</span><span class="tag t-coral">场景化选型</span><span class="tag t-blue">效能量化</span>
+          </div>
+          <span class="pc-cta">查看项目详情</span>
+        </div>
+      </article>
+
+      <!-- 项目三 -->
+      <article class="project-card reveal" data-modal="modal-p3" role="button" tabindex="0" aria-label="查看项目三详情" style="transition-delay:.2s">
+        <div class="pc-cover">
+          <span class="pc-num">PROJECT 03</span>
+          <img src="./images/项目3_AI产品运营全业务闭环总流程.png" loading="lazy"
+               onerror="window.imgFallback(this,'项目3 · 全业务闭环总流程','./images/项目3_AI产品运营全业务闭环总流程.png')" alt="项目三封面：AI产品运营全业务闭环总流程">
+        </div>
+        <div class="pc-body">
+          <h3>AI产品运营核心场景流程体系搭建</h3>
+          <p class="pc-sub">8大核心场景 · 7张流程图 + 1张总图 · 标注运营介入节点与风险卡点</p>
+          <div class="tag-row">
+            <span class="tag t-mint">流程体系</span><span class="tag t-yellow">知识沉淀</span><span class="tag t-pink">跨部门协同</span>
+          </div>
+          <span class="pc-cta">查看项目详情</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ================= Skills ================= -->
+  <section class="section" id="skills">
+    <span class="section-label reveal">03 · Skills</span>
+    <h2 class="section-title reveal">从取数到看板，从清洗到验证</h2>
+
+    <div class="skill-group reveal">
+      <div class="sg-head">
+        <span class="sg-dot" style="background:var(--blue)"></span>
+        <h3>数据工具</h3>
+        <span class="sg-tag">核心能力</span>
+      </div>
+      <div class="skill-grid cols-4">
+        <div class="skill-card"><svg class="doodle ico" aria-hidden="true"><use href="#d-gear"></use></svg><h4>Power Query</h4><p>自动化清洗规则</p><span class="arrow">数据预处理</span></div>
+        <div class="skill-card"><svg class="doodle ico" aria-hidden="true"><use href="#d-db"></use></svg><h4>SQL</h4><p>多表JOIN、窗口函数、聚合查询</p><span class="arrow">用户行为取数与归因</span></div>
+        <div class="skill-card"><svg class="doodle ico" aria-hidden="true"><use href="#d-flask"></use></svg><h4>SPSS</h4><p>卡方检验、描述性统计</p><span class="arrow">假设验证</span></div>
+        <div class="skill-card"><svg class="doodle ico" aria-hidden="true"><use href="#d-bar"></use></svg><h4>Power BI</h4><p>交互式看板搭建与下钻</p><span class="arrow">数据监控与可视化</span></div>
+      </div>
+      <div class="sg-note">用数据说话，不是凭直觉拍板</div>
+    </div>
+
+    <div class="skill-group reveal">
+      <div class="sg-head">
+        <span class="sg-dot" style="background:var(--lav)"></span>
+        <h3>AI落地能力</h3>
+        <span class="sg-tag">核心能力</span>
+      </div>
+      <div class="skill-grid cols-2">
+        <div class="skill-card"><svg class="doodle ico" aria-hidden="true"><use href="#d-spark"></use></svg><h4>Prompt Engineering</h4><p>结构化Prompt、Few-shot、约束前置</p><span class="arrow">提升AI输出质量</span></div>
+        <div class="skill-card"><svg class="doodle ico" aria-hidden="true"><use href="#d-brain"></use></svg><h4>大模型场景化选型</h4><p>7款模型测评，建立任务匹配矩阵</p><span class="arrow">运营任务精准分工</span></div>
+      </div>
+      <div class="sg-note">深度测评7款主流大模型，建立场景化选型矩阵</div>
+    </div>
+
+    <div class="skill-group reveal">
+      <div class="sg-head">
+        <span class="sg-dot" style="background:var(--coral)"></span>
+        <h3>协作与基础</h3>
+        <span class="sg-tag">轻量化展示</span>
+      </div>
+      <div class="skill-grid cols-2 small">
+        <div class="skill-card small"><svg class="doodle ico" aria-hidden="true"><use href="#d-nodes"></use></svg><h4>协作工具</h4><p>飞书 / ProcessOn / XMind</p><span class="arrow">流程图、思维导图、协作文档</span></div>
+        <div class="skill-card small"><svg class="doodle ico" aria-hidden="true"><use href="#d-book"></use></svg><h4>基础能力</h4><p>CET-6 · 计算机二级 · 汉语言文学 · 熟练盲打</p><span class="arrow">文字敏感与逻辑思维</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Contacts ================= -->
+  <section class="section" id="contacts">
+    <div class="blob" data-parallax="0.3"><span class="blob-inner" style="background:#F2D675"></span></div>
+    <div class="blob" data-parallax="0.45"><span class="blob-inner" style="background:#B8D4A8"></span></div>
+
+    <span class="section-label reveal">04 · Contact</span>
+    <h2 class="section-title reveal">期待认识你</h2>
+
+    <p class="contact-intro reveal">正在寻找 <span class="hl-blue">AI 产品运营</span>方向的实习 / 全职机会。<br>
+    如果你需要的是一个<span class="hl-blue">懂数据、懂内容、懂AI</span>的运营伙伴，<br>期待认识你。</p>
+
+    <div class="contact-cards reveal" style="transition-delay:.1s">
+      <div class="contact-card">
+        <svg class="doodle ico" aria-hidden="true"><use href="#d-mail"></use></svg>
+        <div><div class="lab">EMAIL</div><div class="val">3052771297@qq.com</div></div>
+      </div>
+      <div class="contact-card">
+        <svg class="doodle ico" aria-hidden="true"><use href="#d-phone"></use></svg>
+        <div><div class="lab">PHONE</div><div class="val"><a href="tel:16681303523">166 8130 3523</a></div></div>
+      </div>
+    </div>
+    <button class="copy-btn" id="copyEmail"><svg class="doodle cb" aria-hidden="true"><use href="#d-copy"></use></svg> 复制邮箱</button>
+  </section>
+
+</main>
+
+<footer>© 2026 李琳娜 · 用数据说话，用内容连接 <b>·</b> 一个懂数据的文科生</footer>
+
+<div id="toast"></div>
+<!-- ================= 模态框 ================= -->
+<div class="modal-overlay" id="modal">
+  <div class="modal" role="dialog" aria-modal="true">
+    <button class="modal-close" aria-label="关闭">✕</button>
+
+    <!-- 校园经历灯箱一：文旅志愿服务 -->
+    <div class="modal-content" id="modal-exp1">
+      <div class="elb-head"><span class="elb-dot"></span><h3>文旅志愿服务支队 · 活动流程提效</h3></div>
+      <div class="elb-grid">
+        <img src="./images/campus-volunteer-1.jpg" loading="lazy" onerror="window.imgFallback(this,'志愿者群接龙混乱截图','./images/campus-volunteer-1.jpg')" alt="志愿者群接龙报名混乱截图">
+        <img src="./images/campus-volunteer-2.jpg" loading="lazy" onerror="window.imgFallback(this,'金山文档报名表','./images/campus-volunteer-2.jpg')" alt="流程化的金山文档报名表">
+        <img src="./images/campus-volunteer-3.jpg" loading="lazy" onerror="window.imgFallback(this,'优化后签到表','./images/campus-volunteer-3.jpg')" alt="线下签到表SOP">
+      </div>
+      <p class="elb-caption">发现问题（大群接龙混乱）→ 设计解决方案（标准化在线报名表） → 沉淀SOP（线下签到表）</p>
+    </div>
+
+    <!-- 校园经历灯箱二：公众号运营 -->
+    <div class="modal-content" id="modal-exp2">
+      <div class="elb-head"><span class="elb-dot"></span><h3>《人文评鉴》公众号 · 内容运营</h3></div>
+      <div class="elb-grid">
+        <img src="./images/campus-wechat-1.jpg" loading="lazy" onerror="window.imgFallback(this,'公众号推文Prompt','./images/campus-wechat-1.jpg')" alt="公众号推文Prompt截图">
+        <img src="./images/campus-wechat-2.jpg" loading="lazy" onerror="window.imgFallback(this,'AI生成内容质检SOP','./images/campus-wechat-2.jpg')" alt="AI生成内容质检SOP截图">
+        <img src="./images/campus-wechat-3.jpg" loading="lazy" onerror="window.imgFallback(this,'推文正文','./images/campus-wechat-3.jpg')" alt="推文正文截图">
+        <img src="./images/campus-wechat-4.jpg" loading="lazy" onerror="window.imgFallback(this,'推文末尾公众号名片','./images/campus-wechat-4.jpg')" alt="推文末尾公众号名片截图">
+      </div>
+      <p class="elb-caption">Prompt工程驱动内容生产 → 建立AI质检SOP确保输出质量 → 实际推文成果</p>
+    </div>
+
+    <!-- 项目一 -->
+    <div class="modal-content" id="modal-p1">
+      <div class="m-cover">
+        <div class="m-cover-info">
+          <span class="m-cover-tag">项目一 · 用户反馈数据分析</span>
+          <h3>AI写作工具用户反馈数据分析与产品迭代</h3>
+          <p class="m-sub">χ²=86.633, p&lt;0.001 · 150条有效反馈 · P0需求3项 / P1需求5项 / P2需求6项</p>
+          <div class="tag-row">
+            <span class="tag t-blue">SQL</span><span class="tag t-yellow">Power BI</span>
+            <span class="tag t-pink">SPSS</span><span class="tag t-mint">用户反馈闭环</span>
+          </div>
+        </div>
+        <img class="m-cover-img" src="./images/项目1_PowerBI看板.png" loading="lazy"
+             onerror="window.imgFallback(this,'项目1 · PowerBI 看板','./images/项目1_PowerBI看板.png')" alt="PowerBI 看板">
+      </div>
+
+      <div class="m-screen">
+        <h4>01 · 硬核成果</h4>
+        <div class="m-stats">
+          <div class="m-stat big"><span class="num">χ²=86.633</span><span class="cap">p &lt; 0.001 · 统计显著</span></div>
+          <div class="m-stat"><span class="num">150</span><span class="cap">条有效反馈样本</span></div>
+          <div class="m-stat"><span class="num">77%</span><span class="cap">1星用户反馈功能Bug</span></div>
+          <div class="m-stat"><span class="num">82%</span><span class="cap">4-5星用户提新增需求</span></div>
+        </div>
+        <p class="m-lead">统计证实：<b>星级评分与问题类型显著相关</b>（n=150），运营策略必须分层。</p>
+        <div class="m-pills">
+          <span class="pill p0">P0 阻断性痛点 3项</span>
+          <span class="pill p1">P1 体验性痛点 5项</span>
+          <span class="pill p2">P2 需求性增项 6项</span>
+        </div>
+      </div>
+
+      <div class="m-screen">
+        <h4>02 · 三个核心洞察</h4>
+
+        <div class="insight">
+          <div class="insight-head"><span class="dot blue"></span><h5>洞察1 · 用户分层真实存在</h5></div>
+          <p>卡方检验（Pearson χ²=86.633，p&lt;0.001）证实<b>星级与问题大类显著相关</b>。1星用户77%集中反馈功能Bug（卡死/闪退/支付），4-5星用户82%反馈新增需求。运营策略必须分层，不能一刀切。</p>
+          <img src="./images/卡方检验X交叉表.png" loading="lazy"
+               onerror="window.imgFallback(this,'卡方检验 × 交叉表','./images/卡方检验X交叉表.png')" alt="卡方检验交叉表">
+        </div>
+
+        <div class="insight">
+          <div class="insight-head"><span class="dot pink"></span><h5>洞察2 · AI编造/幻觉是「高频高共鸣」隐形炸弹</h5></div>
+          <p>四象限分析（频次 × 平均点赞）：</p>
+          <ul>
+            <li><b>AI编造/幻觉</b>：13条，平均点赞12.1 → 高频高共鸣，优先级高于频次第一的内容质量（15条，点赞6.1）</li>
+            <li><b>溯源/可信度</b>：仅8条，平均点赞14.4（全场最高）→ 低频高共鸣暗礁，极易被忽略</li>
+          </ul>
+          <table class="mini-table">
+            <tr><th>问题大类</th><th>频次</th><th>平均点赞</th><th>象限判断</th></tr>
+            <tr><td>AI编造/幻觉</td><td>13</td><td>12.1</td><td>高频高共鸣 <svg class="doodle st2" aria-hidden="true"><use href="#d-star"></use></svg></td></tr>
+            <tr><td>内容质量</td><td>15</td><td>6.1</td><td>高频低共鸣</td></tr>
+            <tr><td>溯源/可信度</td><td>8</td><td>14.4</td><td>低频高共鸣 <svg class="doodle st2" aria-hidden="true"><use href="#d-star"></use></svg></td></tr>
+          </table>
+        </div>
+
+        <div class="insight">
+          <div class="insight-head"><span class="dot mint"></span><h5>洞察3 · 70%反馈属于「止血型」</h5></div>
+          <p>P0 35条（23.3%）+ P1 70条（46.7%）= <b>70%</b>。产品当前首要任务是<b>修复稳定性与核心体验</b>，再谈新增需求。</p>
+          <div class="donut-chart">
+  <svg viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="紧急程度分布环形图">
+    <g transform="rotate(-90 100 100)">
+      <circle cx="100" cy="100" r="80" fill="none" stroke="#E85D4E" stroke-width="36" stroke-dasharray="117.3 385.4"/>
+      <circle cx="100" cy="100" r="80" fill="none" stroke="#E3BE4E" stroke-width="36" stroke-dasharray="234.6 268.1" stroke-dashoffset="-117.3"/>
+      <circle cx="100" cy="100" r="80" fill="none" stroke="#4A90E2" stroke-width="36" stroke-dasharray="150.8 351.9" stroke-dashoffset="-351.9"/>
+    </g>
+    <text x="100" y="95" text-anchor="middle" font-size="26" font-weight="800" fill="#2C1810">70%</text>
+    <text x="100" y="118" text-anchor="middle" font-size="11.5" fill="#6E5A4B">止血型 P0+P1</text>
+  </svg>
+  <div class="donut-legend">
+    <span><i style="background:#E85D4E"></i>P0 阻断性 · 35条 · 23.3%</span>
+    <span><i style="background:#E3BE4E"></i>P1 体验性 · 70条 · 46.7%</span>
+    <span><i style="background:#4A90E2"></i>P2 需求性 · 45条 · 30.0%</span>
+  </div>
+</div>
+        </div>
+      </div>
+
+      <div class="m-screen">
+        <h4>03 · 迭代方案</h4>
+        <p class="m-lead">基于「频次 × 共鸣度」四象限与紧急程度，输出行动清单：</p>
+        <div class="table-wrap">
+          <table class="grid">
+            <thead><tr><th>优先级</th><th>问题子类</th><th>频次</th><th>平均点赞</th><th>同步对象</th><th>建议动作</th><th>预计效果</th></tr></thead>
+            <tbody>
+              <tr class="row-p0"><td><span class="pill p0">P0</span></td><td>卡死/闪退</td><td>10</td><td>5.8</td><td>研发</td><td>优化内存与并发处理</td><td>预计同类反馈下降约70%</td></tr>
+              <tr class="row-p0"><td><span class="pill p0">P0</span></td><td>AI编造/幻觉</td><td>13</td><td>12.1</td><td>算法</td><td>引入RAG架构+来源标注</td><td>预计溯源类投诉显著减少</td></tr>
+              <tr class="row-p0"><td><span class="pill p0">P0</span></td><td>支付/账号</td><td>11</td><td>7.1</td><td>研发+客服</td><td>修复支付回调与登录态</td><td>预计同类反馈趋于归零</td></tr>
+              <tr class="row-p1"><td><span class="pill p1">P1</span></td><td>内容质量</td><td>15</td><td>6.1</td><td>算法</td><td>优化训练数据与事实校验层</td><td>预计低星内容投诉占比降低</td></tr>
+              <tr class="row-p1"><td><span class="pill p1">P1</span></td><td>格式/兼容性</td><td>10</td><td>4.4</td><td>研发</td><td>统一导出渲染引擎</td><td>预计格式类反馈下降约60%</td></tr>
+              <tr class="row-p1"><td><span class="pill p1">P1</span></td><td>响应速度慢</td><td>8</td><td>7.1</td><td>研发+运维</td><td>扩容服务器+API缓存优化</td><td>预计响应时间下降约50%</td></tr>
+              <tr class="row-p1"><td><span class="pill p1">P1</span></td><td>操作复杂</td><td>8</td><td>4.5</td><td>产品</td><td>重构新手引导流程</td><td>预计新手操作流失率降低</td></tr>
+              <tr class="row-p1"><td><span class="pill p1">P1</span></td><td>结果不符预期</td><td>9</td><td>6.1</td><td>产品+算法</td><td>优化Prompt与多轮对话能力</td><td>预计内容返工率降低</td></tr>
+              <tr class="row-p2"><td><span class="pill p2">P2</span></td><td>模板扩展</td><td>10</td><td>7.8</td><td>产品</td><td>新增小红书/论文/脚本模板</td><td>预计模板类需求下降约50%</td></tr>
+              <tr class="row-p2"><td><span class="pill p2">P2</span></td><td>个性化控制</td><td>10</td><td>6.9</td><td>产品+算法</td><td>规划用户风格库</td><td>预计风格类反馈减少</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="m-note">注：P0为阻断性体验，P1为体验性痛点，P2为需求性增项。预计效果基于同类产品的修复经验估算。</p>
+      </div>
+
+      <div class="m-screen">
+        <h4>04 · 可视化佐证</h4>
+        <div class="m-two">
+          <figure>
+            <img src="./images/项目1_PowerBI看板_痛点分布.png" loading="lazy"
+                 onerror="window.imgFallback(this,'痛点分布看板','./images/项目1_PowerBI看板_痛点分布.png')" alt="星级×问题大类交叉分析">
+            <figcaption><svg class="doodle st" aria-hidden="true"><use href="#d-star"></use></svg> 星级×问题大类交叉分析：4-5星用户几乎不反馈功能Bug，集中提新增需求，<b>反向验证用户分层</b>。</figcaption>
+          </figure>
+          <figure>
+            <img src="./images/项目1_PowerBI看板_协同矩阵.png" loading="lazy"
+                 onerror="window.imgFallback(this,'协同矩阵看板','./images/项目1_PowerBI看板_协同矩阵.png')" alt="同步对象×紧急程度矩阵">
+            <figcaption><svg class="doodle st" aria-hidden="true"><use href="#d-sync"></use></svg> 同步对象×紧急程度矩阵：算法团队承接53条（35.3%），为<b>最大协同方</b>。</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="m-screen">
+        <span class="step-badge">Step 1 · 数据清洗结果</span>
+        <h4>清洗后的用户反馈数据表</h4>
+        <p class="m-lead">从170条原始反馈中清洗出150条有效数据，统一为九字段结构。</p>
+        <figure class="pj-fig">
+          <img class="pj-img" src="./images/project1-table.jpg" loading="lazy" onerror="window.imgFallback(this,'项目一 · 清洗后反馈数据表','./images/project1-table.jpg')" alt="清洗后的用户反馈数据表">
+          <figcaption>九字段：留言内容、星级评分、点赞数、渠道来源、App版本、问题大类、问题子类、紧急程度、问题状态。</figcaption>
+        </figure>
+      </div>
+
+      <div class="m-screen">
+        <span class="step-badge">Step 2 · SQL 多维度查询与可视化</span>
+        <h4>① 高频问题 TOP10 排名</h4>
+        <figure class="pj-fig">
+          <img class="pj-img" src="./images/project1-sql-top10.jpg" loading="lazy" onerror="window.imgFallback(this,'项目一 · 高频问题TOP10','./images/project1-sql-top10.jpg')" alt="高频问题TOP10排名">
+          <figcaption>洞察：内容质量（15条）与AI编造/幻觉（13条）位居前二，稳定与可信度是用户最在意的体验底线。</figcaption>
+        </figure>
+      </div>
+
+      <div class="m-screen">
+        <h4>② 频次 × 共鸣度四象限分布</h4>
+        <figure class="pj-fig">
+          <img class="pj-img" src="./images/project1-quadrant.jpg" loading="lazy" onerror="window.imgFallback(this,'项目一 · 频次×共鸣度四象限','./images/project1-quadrant.jpg')" alt="频次×共鸣度四象限分布">
+          <figcaption>洞察：AI编造/幻觉（点赞12.1）与溯源/可信度（点赞14.4）落在高共鸣区，优先级高于频次第一的内容质量。</figcaption>
+        </figure>
+      </div>
+
+      <div class="m-screen">
+        <h4>③ 不同星级（1-5星）反馈问题子类分布</h4>
+        <figure class="pj-fig">
+          <img class="pj-img" src="./images/project1-stars.jpg" loading="lazy" onerror="window.imgFallback(this,'项目一 · 星级×问题子类分布','./images/project1-stars.jpg')" alt="不同星级反馈问题子类分布">
+          <figcaption>洞察：1星用户77%反馈功能Bug，4-5星用户70%+提新增需求，验证星级与问题类型显著相关，运营策略必须分层。</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- 项目二 -->
+    <div class="modal-content" id="modal-p2">
+      <div class="m-cover">
+        <div class="m-cover-info">
+          <span class="m-cover-tag">项目二 · 大模型选型与SOP</span>
+          <h3>AI产品运营效能提升方案<br>—— 基于7款主流大模型的场景化选型与SOP制定</h3>
+          <p class="m-sub">7款模型 × 36题 = 168条数据 · 要素漏缺占扣分 61.5% → 4维质检SOP</p>
+          <div class="tag-row">
+            <span class="tag t-lav">Prompt工程</span><span class="tag t-coral">场景化选型</span><span class="tag t-blue">效能量化</span>
+          </div>
+        </div>
+        <img class="m-cover-img" src="./images/项目2_选型矩阵封面.png" loading="lazy"
+             onerror="window.imgFallback(this,'项目2 · 选型矩阵封面','./images/项目2_选型矩阵封面.png')" alt="7大场景选型矩阵">
+      </div>
+
+      <div class="m-screen">
+        <h4>01 · 硬核成果</h4>
+        <div class="m-stats">
+          <div class="m-stat big"><span class="num">168</span><span class="cap">条结构化评测数据</span></div>
+          <div class="m-stat"><span class="num">61.5%</span><span class="cap">要素漏缺占全部扣分</span></div>
+          <div class="m-stat"><span class="num">47%</span><span class="cap">预计内容生产效率提升</span></div>
+          <div class="m-stat"><span class="num">25%→5%</span><span class="cap">预计质检返工率下降</span></div>
+        </div>
+        <p class="m-lead">7款主流大模型 × 36道评测题 = 168条结构化数据 · <b>8大运营能力域</b> · <b>3个难度梯度</b> · <b>7维体验评分</b></p>
+        <div class="m-pills">
+          <span class="pill blue">输出：7大场景选型矩阵</span>
+          <span class="pill mint">4维质检SOP</span>
+          <span class="pill p1">Prompt优化3原则</span>
+        </div>
+      </div>
+
+      <div class="m-screen">
+        <h4>02 · 四个关键发现</h4>
+        <div class="findings">
+          <div class="insight">
+            <div class="insight-head"><span class="dot blue"></span><h5>发现1 · 要素漏缺是最高频质量问题</h5></div>
+            <p>168条客观评测中，扣分原因分布：<b>要素漏缺 61.5%</b> / 知识观点失真 23.1% / 逻辑推理混乱 7.7% / 格式规范不符 7.7%。</p>
+            <p class="m-note">运营解读：核心问题不是「答错」，而是「答不完整」——写朋友圈文案可能漏掉emoji，写周报可能漏掉数据小结。这直接催生了4维质检SOP。</p>
+          </div>
+          <div class="insight">
+            <div class="insight-head"><span class="dot yellow"></span><h5>发现2 · 国内常识时效性断层</h5></div>
+            <p>仅通义千问国内常识达标率<b>100%</b>，其余6款均为83.33%。失分点集中在「五一法定节假日固定几天」——6款模型均答「1天」（旧规），正确答案为「2天」（2025年新规）。</p>
+            <p class="m-note">运营解读：需建立三层更新机制：基座模型定期评估 → RAG外挂知识库实时检索 → 事实核查节点强制校验。</p>
+          </div>
+          <div class="insight">
+            <div class="insight-head"><span class="dot pink"></span><h5>发现3 · 多轮记忆衰减，私域运营风险预警</h5></div>
+            <p>讯飞星火多轮记忆达标率仅<b>66.67%</b>，第四轮完全遗忘用户「不吃甜食」的前置约束；通义千问<b>100%</b>达标。</p>
+            <p class="m-note">运营解读：私域运营（企微社群、客服Bot）中，Bot忘记用户偏好会产生强烈「对牛弹琴」感，导致流失。选型必须把多轮记忆作为硬指标。</p>
+          </div>
+          <div class="insight">
+            <div class="insight-head"><span class="dot coral"></span><h5>发现4 · 「好用」≠「准确」，须双维度交叉验证</h5></div>
+            <p>客观达标率第1：<b>豆包（97.36%）</b>；主观体验分第1：<b>通义千问（4.83分）</b>。DeepSeek客观第4（95.28%）但粘贴方便度仅3分（带星号/特殊符号）。</p>
+            <p class="m-note">运营解读：「粘贴方便度」直接影响发布效率，只看客观准确率选型会忽略真实操作摩擦成本。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="m-screen">
+        <h4>03 · 7大运营场景选型矩阵</h4>
+        <div class="table-wrap">
+          <table class="grid">
+            <thead><tr><th>运营任务</th><th>推荐模型</th><th>数据依据</th><th>核心SOP</th></tr></thead>
+            <tbody>
+              <tr><td>批量内容生成（社群日更/朋友圈/短文案）</td><td><b>豆包</b></td><td>客观达标率第1（97.36%）+ 响应速度5分 + 粘贴方便度4分</td><td>①结构化Prompt锁定格式 ②输出后直接粘贴 ③批量采用「1+N」模式</td></tr>
+              <tr><td>用户反馈分析与归因（数据复盘/痛点挖掘）</td><td><b>DeepSeek</b></td><td>逻辑推理能力强 + 推理链条清晰</td><td>①原始反馈→SQL清洗 ②输入DeepSeek归因 ③人工复核事实结论 ④输出报告</td></tr>
+              <tr><td>私域高并发互动（社群陪聊/1v1回复）</td><td><b>通义千问</b></td><td>多轮记忆100% + 主观体验第1 + 意图理解5分</td><td>①用户画像Prompt注入 ②每3轮设置记忆检查点 ③高危回答二次校验</td></tr>
+              <tr><td>长文档摘要提炼（竞品调研/反馈汇总）</td><td><b>Kimi</b></td><td>长文本处理100% + 超长上下文能力</td><td>①直接上传PDF/Word ②指令：「提取核心观点，按XX维度分类」 ③人工校验数字</td></tr>
+              <tr><td>标准化SOP/FAQ生成（知识库/话术手册）</td><td><b>智谱清言</b></td><td>最喜欢输出表格/流程图 + 结构化能力强</td><td>①输入原始素材 ②指令：「生成三列FAQ（问题/回答/注意事项）」 ③导出培训文档</td></tr>
+              <tr><td>品牌调性文案（品牌故事/海报文案）</td><td><b>文心一言</b></td><td>文学类输出质量突出 + 文笔流畅优美</td><td>①注入品牌调性关键词 ②Few-shot示例锁定风格 ③人工终审情感共鸣度</td></tr>
+              <tr><td>语音素材处理（播客整理/直播话术）</td><td><b>讯飞星火</b></td><td>语音识别能力差异化（文本第7，语音独家）</td><td>①语音转文字用讯飞 ②文字精修切换豆包/通义 ③形成「语音→文字→润色」两段式</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="m-screen">
+        <h4>04 · 4维质检SOP + Prompt优化3原则</h4>
+        <div class="table-wrap">
+          <table class="grid">
+            <thead><tr><th>质检维度</th><th>检查项</th><th>操作标准</th><th>责任节点</th></tr></thead>
+            <tbody>
+              <tr><td><b>完整性校验</b></td><td>约束满足度</td><td>将指令拆解为Checklist，逐条核对</td><td>AI生成后运营自查</td></tr>
+              <tr><td><b>准确性校验</b></td><td>事实核查</td><td>涉及数据/政策/平台规则的内容必须二次查证</td><td>资深运营/知识库管理员</td></tr>
+              <tr><td><b>格式合规性</b></td><td>粘贴方便度</td><td>输出是否带多余符号*、#、链接</td><td>运营自查</td></tr>
+              <tr><td><b>安全合规性</b></td><td>违规风险</td><td>是否出现极限词、违规引导、敏感内容</td><td>安全合规系统+人工抽检</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="principles">
+          <div class="principle">
+            <span class="p-num">PRINCIPLE 01</span>
+            <h5>约束前置原则</h5>
+            <p>将格式要求放在Prompt开头而非结尾。高分作答往往先复述约束，再输出内容。</p>
+          </div>
+          <div class="principle">
+            <span class="p-num">PRINCIPLE 02</span>
+            <h5>分步拆解原则</h5>
+            <p>多约束任务拆分为「步骤1:生成内容 → 步骤2:按格式调整 → 步骤3:字数压缩」。</p>
+          </div>
+          <div class="principle">
+            <span class="p-num">PRINCIPLE 03</span>
+            <h5>Few-shot锁定原则</h5>
+            <p>提供1个符合所有约束的示例，模型模仿完整度显著高于纯指令。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="m-screen">
+        <span class="step-badge">Step 1 · 评测数据集结构</span>
+        <h4>7款模型 × 36道评测题 = 168条记录</h4>
+        <p class="m-lead">7款模型 × 36道评测题 = 168条记录，覆盖8大运营能力域。</p>
+        <figure class="pj-fig">
+          <img class="pj-img" src="./images/project2-dataset.jpg" loading="lazy" onerror="window.imgFallback(this,'项目二 · 评测数据集结构','./images/project2-dataset.jpg')" alt="评测数据集结构">
+          <figcaption>字段：模型名称、任务分类、难度梯度、客观达标率、主观体验分，覆盖 8 大运营能力域 × 3 个难度梯度。</figcaption>
+        </figure>
+      </div>
+
+      <div class="m-screen">
+        <span class="step-badge">Step 2 · 核心分析可视化</span>
+        <h4>① 各模型综合达标率排名（横向柱状图）</h4>
+        <figure class="pj-fig">
+          <img class="pj-img" src="./images/project2-ranking.jpg" loading="lazy" onerror="window.imgFallback(this,'项目二 · 综合达标率排名','./images/project2-ranking.jpg')" alt="各模型综合达标率排名">
+          <figcaption>洞察：豆包（97.4%）客观达标率第一，通义千问（96.2%）紧随其后，二者为综合选型第一梯队。</figcaption>
+        </figure>
+      </div>
+
+      <div class="m-screen">
+        <h4>② 各模型在不同任务分类中的达标率对比（分组柱状图）</h4>
+        <figure class="pj-fig">
+          <img class="pj-img" src="./images/project2-task.jpg" loading="lazy" onerror="window.imgFallback(this,'项目二 · 任务分类达标率对比','./images/project2-task.jpg')" alt="各模型任务分类达标率对比">
+          <figcaption>洞察：通义千问知识问答（98.4%）最强，DeepSeek 数据分析（96.1%）突出——不同任务应选择不同模型。</figcaption>
+        </figure>
+      </div>
+
+      <div class="m-screen">
+        <h4>③ 各模型在不同体验维度下的达标率（雷达图）</h4>
+        <figure class="pj-fig">
+          <img class="pj-img" src="./images/project2-radar.jpg" loading="lazy" onerror="window.imgFallback(this,'项目二 · 体验维度雷达图','./images/project2-radar.jpg')" alt="各模型体验维度雷达图">
+          <figcaption>洞察：豆包「粘贴方便度/响应速度」领先，通义千问「意图理解/多轮记忆」最强，DeepSeek 逻辑强但粘贴体验扣分。</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- 项目三 -->
+            <div class="modal-content" id="modal-p3">
+      <div class="m-cover">
+        <div class="m-cover-info">
+          <span class="m-cover-tag">项目三 · 流程体系与知识沉淀</span>
+          <h3>AI产品运营核心场景流程体系搭建与知识沉淀</h3>
+          <p class="m-sub">8大核心场景 · 7张流程图 + 1张总图 · 标注运营介入节点与风险卡点</p>
+          <div class="tag-row">
+            <span class="tag t-mint">流程体系</span><span class="tag t-yellow">知识沉淀</span><span class="tag t-pink">跨部门协同</span>
+          </div>
+        </div>
+        <img class="m-cover-img" src="./images/项目3_AI产品运营全业务闭环总流程.png" loading="lazy" onerror="window.imgFallback(this,'项目3 · 全业务闭环总流程','./images/项目3_AI产品运营全业务闭环总流程.png')" alt="AI产品运营全业务闭环总流程">
+      </div>
+
+      
+      <div class="m-screen">
+        <h4>01 · 硬核成果</h4>
+        <div class="m-stats">
+          <div class="m-stat big"><span class="num">8</span><span class="cap">大核心场景全流程梳理</span></div>
+          <div class="m-stat"><span class="num">7+1</span><span class="cap">张场景流程图 + 总图</span></div>
+          <div class="m-stat"><span class="num">8</span><span class="cap">张XMind复盘思维导图</span></div>
+          <div class="m-stat"><span class="num">2周→1周</span><span class="cap">预计新人上手周期</span></div>
+        </div>
+        <p class="m-lead">每张图标注：<b>运营介入节点</b>（黄色高亮）· <b>风险卡点</b>（红色标注）· <b>协同方责任矩阵（RACI）</b></p>
+        <div class="m-pills">
+          <span class="pill blue">可用作团队培训材料</span>
+          <span class="pill mint">覆盖 AI产品运营 / 用户运营 / 知识库运营 / 客服运营</span>
+        </div>
+      </div>
+
+      <div class="m-screen">
+        <span class="step-badge">核心成果</span>
+        <h4>核心运营场景流程图 &amp; 思维导图</h4>
+        <p class="m-lead">8大核心场景 · 7张流程图 + 1张总图，标注运营介入节点与风险卡点；每场景配套 XMind 复盘思维导图。</p>
+        <div class="pj-stack">
+          <img class="pj-img" src="./images/project3-flowchart.jpg" loading="lazy" onerror="window.imgFallback(this,'项目三 · 核心运营场景流程图','./images/project3-flowchart.jpg')" alt="核心运营场景流程图">
+          <img class="pj-img" src="./images/project3-mindmap.jpg" loading="lazy" onerror="window.imgFallback(this,'项目三 · 思维导图','./images/project3-mindmap.jpg')" alt="思维导图">
+        </div>
+      </div>
+<div class="m-screen">
+        <span class="step-badge">代表性场景</span>
+        <h4>三个代表性场景 —— 从用户激活到投诉闭环</h4>
+
+        <div class="insight">
+          <div class="insight-head"><span class="dot blue"></span><h5>场景1 · 新用户全转化路径 —— 从「下载」到「首聊」的流失拦截</h5></div>
+          <p>梳理公域曝光→下载安装→登录→偏好调研→首聊激活→付费转化→沉默召回全链路，识别 <b>5大流失卡点</b>：</p>
+          <div class="actions">
+            <div class="action"><span class="a-dot">1</span><p><b>登录流失</b>：用户关闭登录弹窗 → <b>运营拦截</b>：第三方快捷登录 + 弹窗挽留</p></div>
+            <div class="action"><span class="a-dot">2</span><p><b>调研流失</b>：跳过偏好调研 → <b>运营拦截</b>：简化调研 + 完成解锁专属模板</p></div>
+            <div class="action"><span class="a-dot">3</span><p><b>首页首聊流失</b>：30秒无输入未生成AI内容 → <b>运营拦截</b>：顶部引导输入框 + 场景模板专区 + 轻引导弹窗</p></div>
+            <div class="action"><span class="a-dot">4</span><p><b>沉默流失</b>：3-7天未登录 → <b>运营拦截</b>：APP推送 + 短信双渠道召回，附赠限时免费额度</p></div>
+            <div class="action"><span class="a-dot">5</span><p><b>永久流失</b>：召回后仍不打开 → <b>运营拦截</b>：标记为永久流失，停止打扰</p></div>
+          </div>
+          <img src="./images/项目3_新用户全转化流程图.png" loading="lazy" onerror="window.imgFallback(this,'新用户全转化流程图','./images/项目3_新用户全转化流程图.png')" alt="新用户全转化流程图">
+        </div>
+
+        <div class="insight">
+          <div class="insight-head"><span class="dot mint"></span><h5>场景2 · AI问答效果优化闭环 —— BadCase驱动的持续迭代</h5></div>
+          <div class="flow"><b>用户提问 → AI回复 → 反馈采集</b>（显性点赞/点踩 + 硬性复制/停留/中途退出）<b>→ 效果判定 → BadCase收录 → 根因归因 → 优化执行 → 灰度复测 → 达标入库</b></div>
+          <div class="actions">
+            <div class="action"><span class="a-dot">A</span><p><b>BadCase分级</b>：P0批量高危（同步算法团队）、P1/P2运营独立调优Prompt与知识库</p></div>
+            <div class="action"><span class="a-dot">B</span><p><b>根因归因</b>：拉取ES检索日志，召回分&lt;0.5判定为知识盲区</p></div>
+            <div class="action"><span class="a-dot">C</span><p><b>优化执行</b>：Prompt增加事实约束、RAG切片512→256字、Temperature参数调控</p></div>
+            <div class="action"><span class="a-dot">D</span><p><b>复测标准</b>：5%线上灰度流量 + 200条离线人工Diff测试，点踩率降幅&gt;5%且留存下跌&lt;2%</p></div>
+          </div>
+          <p class="m-note"><svg class="doodle st" aria-hidden="true"><use href="#d-warn"></use></svg> 风险卡点：复测不达标需回流整改，防止「修复引入新问题」。</p>
+          <img src="./images/项目3_AI问答效果优化闭环流程图.png" loading="lazy" onerror="window.imgFallback(this,'AI问答效果优化闭环流程图','./images/项目3_AI问答效果优化闭环流程图.png')" alt="AI问答效果优化闭环流程图">
+        </div>
+
+        <div class="insight">
+          <div class="insight-head"><span class="dot coral"></span><h5>场景3 · 用户负面反馈 &amp; 投诉闭环 —— 分级响应与督办追踪</h5></div>
+          <div class="flow"><b>多渠道统一收集</b>（APP/客服/应用商店/社群）→ 前置分流（纯情绪类客服直接结案 / 实质问题进入分级流程）→ 分级分类判定 → 分派修复 → 效果验证 → 用户回访 → BadCase归档</div>
+          <div class="actions">
+            <div class="action"><span class="a-dot">A</span><p><b>RACI责任矩阵</b>：R执行人（一线客服/产品运营）· A负责人（各团队Leader）· C需咨询方（法务/公关）· I需告知方（管理层）</p></div>
+            <div class="action"><span class="a-dot">B</span><p><b>分级响应时效</b>：P1紧急级（核心功能不可用，2h内制定方案）/ P2常规级（非核心问题，24h内修复或给排期）</p></div>
+            <div class="action"><span class="a-dot">C</span><p><b>三色督办追踪</b>：红（超时未处理）/ 黄（即将超时预警）/ 橙（已升级督办）</p></div>
+            <div class="action"><span class="a-dot">D</span><p><b>超时兜底</b>：超1.5倍时效自动上报负责人，启动兜底补偿通道</p></div>
+          </div>
+          <p class="m-note"><svg class="doodle st" aria-hidden="true"><use href="#d-warn"></use></svg> 风险卡点：用户不认可处理结果触发二次整改回流，避免「形式上闭环、实质上未解决」。</p>
+          <img src="./images/项目3_用户负面反馈投诉闭环流程图.png" loading="lazy" onerror="window.imgFallback(this,'用户负面反馈投诉闭环流程图','./images/项目3_用户负面反馈投诉闭环流程图.png')" alt="用户负面反馈投诉闭环流程图">
+        </div>
+      </div>
+      <div class="m-screen">
+        <h4>04 · 知识沉淀价值</h4>
+        <div class="table-wrap">
+          <table class="grid">
+            <thead><tr><th>沉淀资产</th><th>数量</th><th>用途</th></tr></thead>
+            <tbody>
+              <tr><td>ProcessOn流程图</td><td>7张场景图 + 1张总图</td><td>标注运营介入节点、风险卡点、协同方</td></tr>
+              <tr><td>XMind复盘思维导图</td><td>8张</td><td>每个场景的根因分析、优化策略、落地手段</td></tr>
+              <tr><td>培训价值</td><td>—</td><td>预计新人上手周期从2周缩短至1周</td></tr>
+              <tr><td>覆盖岗位</td><td>—</td><td>AI产品运营、用户运营、知识库运营、客服运营</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+<style>.hl-inline{background:linear-gradient(180deg,transparent 60%,rgba(212,90,58,.18) 60%);padding:0 3px;border-radius:2px}body.preview .reveal{opacity:1!important;transform:none!important;transition:none!important}
+body.preview main{opacity:1!important;transform:none!important;transition:none!important}
+body.preview .nav{opacity:1!important;transform:none!important;transition:none!important}
+body.preview .modal-overlay{transition:none!important}
+body.preview .modal{transition:none!important}
+</style>
+
+<script>
+(function(){
+'use strict';
+var $=function(s,c){return (c||document).querySelector(s);};
+var $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s));};
+var lerp=function(a,b,t){return a+(b-a)*t;};
+var modal=$('#modal');
+var reduceMotion=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---------- 预览模式（?preview 或 ?preview&scroll=projects 可直接查看正文） ---------- */
+var params=new URLSearchParams(location.search);
+if(params.has('preview')){
+  document.body.classList.add('preview');
+  var pi=$('#intro'); if(pi){pi.style.display='none';}
+  document.body.classList.remove('locked');
+  $('#main').classList.add('show');
+  $('#nav').classList.add('show');
+  window.__introDone=true;
+  var h=location.hash.replace(/^#/,'');
+  if(h){
+    if(h.indexOf('modal-')===0){
+      openModal(h);
+    }else if(document.getElementById(h)){
+      $$('.section').forEach(function(s){if(s.id!==h){s.style.display='none';}});
+    }
+  }
+}/* ---------- 开场：3D 头部 + 瞳孔跟随 + 阴影偏移 ---------- */
+var stage=$('#avatarStage'), avatarImg=$('#avatarImg');
+var pupilL=$('#pupilL'), pupilR=$('#pupilR'), shadowEl=$('#avatarShadow');
+var mx=0,my=0,mouseX=innerWidth/2,mouseY=innerHeight/2;
+var rotX=0,rotY=0;
+var eyeCL={x:0,y:0},eyeCR={x:0,y:0};
+var EYE_RADIUS=14;                 // 瞳孔最大移动半径 px
+var lastMove=performance.now();
+var introDone=!!window.__introDone;
+var transitioning=false;
+
+function onPointerMove(x,y){
+  mouseX=x; mouseY=y;
+  mx=(x/innerWidth)*2-1;
+  my=(y/innerHeight)*2-1;
+  lastMove=performance.now();
+}
+document.addEventListener('mousemove',function(e){onPointerMove(e.clientX,e.clientY);});
+document.addEventListener('mouseleave',function(){mx=0;my=0;mouseX=innerWidth/2;mouseY=innerHeight/2;});
+document.addEventListener('touchmove',function(e){var t=e.touches[0];if(t){onPointerMove(t.clientX,t.clientY);}},{passive:true});
+
+function eyeVec(cx,cy,maxR){
+  var dx=mouseX-cx,dy=mouseY-cy;
+  var dist=Math.hypot(dx,dy);
+  var scale=Math.min(1,dist/260);
+  var r=Math.min(EYE_RADIUS*scale,maxR);
+  if(dist>0){dx/=dist;dy/=dist;}
+  return {x:dx*r,y:dy*r};
+}
+
+function animateIntro(){
+  if(introDone){return;}
+  var now=performance.now();
+  // 静止回正
+  if(now-lastMove>2200){
+    mx=lerp(mx,0,0.04); my=lerp(my,0,0.04);
+    mouseX=lerp(mouseX,innerWidth/2,0.04); mouseY=lerp(mouseY,innerHeight/2,0.04);
+  }
+  var tY=mx*25, tX=-my*8;
+  rotY=lerp(rotY,tY,0.10);
+  rotX=lerp(rotX,tX,0.10);
+  if(stage){stage.style.transform='rotateY('+rotY.toFixed(2)+'deg) rotateX('+rotX.toFixed(2)+'deg)';}
+  if(shadowEl){shadowEl.style.transform='translateX('+(rotY*0.35).toFixed(2)+'px) translateY('+(rotX*0.35).toFixed(2)+'px)';}
+  if(avatarImg&&pupilL&&pupilR){
+    var r=avatarImg.getBoundingClientRect();
+    var lx=r.left+r.width*0.38, ly=r.top+r.height*0.36;
+    var rx=r.left+r.width*0.56, ry=r.top+r.height*0.36;
+    var lensR=(avatarImg.getBoundingClientRect().height)*(38/500);
+    var maxR=Math.max(6,lensR-9);
+    var tL=eyeVec(lx,ly,maxR), tR=eyeVec(rx,ry,maxR);
+    eyeCL.x=lerp(eyeCL.x,tL.x,0.15); eyeCL.y=lerp(eyeCL.y,tL.y,0.15);
+    eyeCR.x=lerp(eyeCR.x,tR.x,0.15); eyeCR.y=lerp(eyeCR.y,tR.y,0.15);
+    pupilL.style.transform='translate(calc(-50% + '+eyeCL.x.toFixed(2)+'px), calc(-50% + '+eyeCL.y.toFixed(2)+'px)) translateZ(16px)';
+    pupilR.style.transform='translate(calc(-50% + '+eyeCR.x.toFixed(2)+'px), calc(-50% + '+eyeCR.y.toFixed(2)+'px)) translateZ(16px)';
+  }
+  requestAnimationFrame(animateIntro);
+}
+if(!introDone){requestAnimationFrame(animateIntro);}
+
+/* ---------- 点击进入：粒子汇聚 + 白光 + 光效扫过 ---------- */
+function launchTransition(){
+  if(introDone||transitioning){return;}
+  transitioning=true;
+  var cv=$('#fxCanvas'), ctx=cv.getContext('2d');
+  cv.style.display='block';
+  cv.width=innerWidth; cv.height=innerHeight;
+  var colors=['#E85D4E','#F2D675','#B8D4A8','#D4A5A5','#8B7EC4','#4A90E2'];
+  var cx=innerWidth/2, cy=innerHeight/2;
+  var parts=[], maxR=Math.min(innerWidth,innerHeight)*0.62;
+  for(var i=0;i<150;i++){
+    var ang=Math.random()*Math.PI*2, rad=40+Math.random()*maxR;
+    parts.push({x:cx+Math.cos(ang)*rad,y:cy+Math.sin(ang)*rad,c:colors[i%colors.length],s:2+Math.random()*3.2});
+  }
+  var start=performance.now();
+  var flash=$('#flash'), sweep=$('#lightSweep'), introEl=$('#intro');
+  function frame(now){
+    var t=(now-start)/1000;
+    var k=Math.min(1,t/0.9);
+    var ease=1-Math.pow(1-k,3);
+    ctx.clearRect(0,0,cv.width,cv.height);
+    for(var j=0;j<parts.length;j++){
+      var p=parts[j];
+      var nx=cx+(p.x-cx)*(1-ease);
+      var ny=cy+(p.y-cy)*(1-ease);
+      ctx.globalAlpha=1-ease*0.9;
+      ctx.fillStyle=p.c;
+      ctx.beginPath(); ctx.arc(nx,ny,p.s*(1-ease*0.4),0,Math.PI*2); ctx.fill();
+    }
+    if(k<1){requestAnimationFrame(frame);}
+    else{
+      ctx.globalAlpha=1; ctx.clearRect(0,0,cv.width,cv.height);
+      flash.classList.add('on');
+      sweep.classList.add('run');
+      setTimeout(function(){
+        introEl.classList.add('hidden');
+        document.body.classList.remove('locked');
+        $('#main').classList.add('show');
+        $('#nav').classList.add('show');
+        introDone=true; transitioning=false;
+        window.scrollTo({top:0,behavior:'auto'});
+        setTimeout(function(){flash.classList.remove('on');sweep.classList.remove('run');cv.style.display='none';},1300);
+      },750);
+    }
+  }
+  requestAnimationFrame(frame);
+}
+if(stage&&!introDone){
+  stage.addEventListener('click',launchTransition);
+  stage.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();launchTransition();}});
+  stage.setAttribute('tabindex','0');
+}
+
+/* ---------- 滚动入场 ---------- */
+var io=new IntersectionObserver(function(entries){
+  entries.forEach(function(en){
+    if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}
+  });
+},{threshold:0.12,rootMargin:'0px 0px -8% 0px'});
+$$('.reveal').forEach(function(el){io.observe(el);});
+
+/* ---------- 视差 ---------- */
+var parEls=$$('[data-parallax]'), parTick=false;
+window.addEventListener('scroll',function(){
+  if(parTick){return;} parTick=true;
+  requestAnimationFrame(function(){
+    parEls.forEach(function(el){
+      var r=el.getBoundingClientRect(), vh=innerHeight;
+      var rel=(r.top+r.height/2-vh/2)/vh;
+      var speed=parseFloat(el.getAttribute('data-parallax')||'0.2');
+      el.style.transform='translate3d(0,'+(-rel*speed*140).toFixed(1)+'px,0)';
+    });
+    parTick=false;
+  });
+},{passive:true});
+
+/* ---------- 模态框 ---------- */
+var modal=$('#modal');
+function openModal(id){
+  $$('.modal-content',modal).forEach(function(c){c.classList.remove('active');});
+  var t=document.getElementById(id); if(t){t.classList.add('active');}
+  modal.classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeModal(){
+  modal.classList.remove('open');
+  document.body.style.overflow='';
+}
+$$('.project-card').forEach(function(c){
+  c.addEventListener('click',function(){openModal(c.getAttribute('data-modal'));});
+  c.addEventListener('keydown',function(e){
+    if(e.key==='Enter'||e.key===' '){e.preventDefault();openModal(c.getAttribute('data-modal'));}
+  });
+});
+$$('.exp-card').forEach(function(c){
+  c.addEventListener('click',function(){openModal(c.getAttribute('data-modal'));});
+  c.addEventListener('keydown',function(e){
+    if(e.key==='Enter'||e.key===' '){e.preventDefault();openModal(c.getAttribute('data-modal'));}
+  });
+});
+modal.addEventListener('click',function(e){
+  if(e.target===modal||e.target.closest('.modal-close')){closeModal();}
+});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeModal();}});
+var autoModal=params.get('modal');
+if(autoModal){setTimeout(function(){openModal('modal-'+autoModal);},700);}
+
+/* ---------- 复制邮箱 ---------- */
+var copyBtn=$('#copyEmail'), toast=$('#toast');
+function showToast(msg){
+  toast.textContent=msg; toast.classList.add('show');
+  clearTimeout(showToast._t);
+  showToast._t=setTimeout(function(){toast.classList.remove('show');},1800);
+}
+function fallbackCopy(text){
+  var ta=document.createElement('textarea');
+  ta.value=text; ta.style.position='fixed'; ta.style.opacity='0';
+  document.body.appendChild(ta); ta.select();
+  try{document.execCommand('copy');}catch(e){}
+  document.body.removeChild(ta);
+}
+if(copyBtn){
+  copyBtn.addEventListener('click',function(){
+    var email='3052771297@qq.com';
+    function done(){
+      copyBtn.classList.add('copied'); copyBtn.innerHTML='<svg class="doodle cb ok" aria-hidden="true"><use href="#d-check"></use></svg> 已复制';
+      showToast('邮箱已复制到剪贴板');
+      setTimeout(function(){copyBtn.classList.remove('copied');copyBtn.innerHTML='<svg class="doodle cb" aria-hidden="true"><use href="#d-copy"></use></svg> 复制邮箱';},2000);
+    }
+    if(navigator.clipboard&&navigator.clipboard.writeText){
+      navigator.clipboard.writeText(email).then(done).catch(function(){fallbackCopy(email);done();});
+    }else{fallbackCopy(email);done();}
+  });
+}
+})();
+</script>
+</body>
+</html>
+
+
